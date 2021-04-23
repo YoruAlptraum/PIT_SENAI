@@ -48,8 +48,16 @@ namespace PIT_SENAI_Windows_Forms
 
         private void btn_enviarCadastro_Click(object sender, EventArgs e)
         {
-            Cadastrar cadastrar = new Cadastrar(txt_cNome.Text,txt_cUser.Text,txt_cSenha.Text,txt_cEmail.Text,txt_cCPF.Text);
-            MessageBox.Show(cadastrar.mensagem);
+            if (chk_deMaior.Checked && chk_termos.Checked && txt_cSenha.Text.Equals(txt_cConfirmarSenha.Text) &&
+                txt_cNome != null && txt_cUser !=null && txt_cSenha != null && txt_cCPF != null && txt_cEmail != null )
+            {
+                Cadastrar cadastrar = new Cadastrar(txt_cNome.Text, txt_cUser.Text, txt_cSenha.Text, txt_cEmail.Text, txt_cCPF.Text);
+                MessageBox.Show(cadastrar.mensagem);
+            }
+            else
+            {
+                MessageBox.Show("todos os campos precisam estar preenchidos e senha deve ser igual a confirmação");
+            }
         }
     }
 }

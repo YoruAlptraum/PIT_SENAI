@@ -50,6 +50,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // btn_enviarCadastro
             // 
+            this.btn_enviarCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_enviarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_enviarCadastro.Location = new System.Drawing.Point(16, 338);
             this.btn_enviarCadastro.Name = "btn_enviarCadastro";
@@ -61,6 +62,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cNome
             // 
+            this.txt_cNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cNome.Location = new System.Drawing.Point(68, 60);
             this.txt_cNome.Name = "txt_cNome";
             this.txt_cNome.Size = new System.Drawing.Size(493, 20);
@@ -68,6 +70,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(13, 60);
@@ -78,6 +81,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(49, 18);
@@ -88,6 +92,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label3
             // 
+            this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(13, 90);
@@ -98,6 +103,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cUser
             // 
+            this.txt_cUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cUser.Location = new System.Drawing.Point(61, 90);
             this.txt_cUser.Name = "txt_cUser";
             this.txt_cUser.Size = new System.Drawing.Size(500, 20);
@@ -105,6 +111,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label4
             // 
+            this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.Location = new System.Drawing.Point(13, 120);
@@ -115,6 +122,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cSenha
             // 
+            this.txt_cSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cSenha.Location = new System.Drawing.Point(72, 120);
             this.txt_cSenha.Name = "txt_cSenha";
             this.txt_cSenha.Size = new System.Drawing.Size(489, 20);
@@ -123,6 +131,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cCPF
             // 
+            this.txt_cCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cCPF.Location = new System.Drawing.Point(57, 240);
             this.txt_cCPF.Name = "txt_cCPF";
             this.txt_cCPF.Size = new System.Drawing.Size(504, 20);
@@ -130,6 +139,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label6
             // 
+            this.label6.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(13, 240);
@@ -140,6 +150,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // chk_deMaior
             // 
+            this.chk_deMaior.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chk_deMaior.AutoSize = true;
             this.chk_deMaior.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_deMaior.Location = new System.Drawing.Point(16, 284);
@@ -151,6 +162,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label7
             // 
+            this.label7.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(13, 210);
@@ -161,6 +173,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cEmail
             // 
+            this.txt_cEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cEmail.Location = new System.Drawing.Point(70, 210);
             this.txt_cEmail.Name = "txt_cEmail";
             this.txt_cEmail.Size = new System.Drawing.Size(491, 20);
@@ -168,6 +181,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // chk_termos
             // 
+            this.chk_termos.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chk_termos.AutoSize = true;
             this.chk_termos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_termos.Location = new System.Drawing.Point(16, 311);
@@ -179,6 +193,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // txt_cConfirmarSenha
             // 
+            this.txt_cConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cConfirmarSenha.Location = new System.Drawing.Point(144, 150);
             this.txt_cConfirmarSenha.Name = "txt_cConfirmarSenha";
             this.txt_cConfirmarSenha.Size = new System.Drawing.Size(417, 20);
@@ -187,6 +202,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             // label5
             // 
+            this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(13, 150);
