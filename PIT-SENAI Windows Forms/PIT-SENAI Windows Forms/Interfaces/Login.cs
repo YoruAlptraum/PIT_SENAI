@@ -8,14 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using PIT_SENAI_Windows_Forms.Interfaces;
+using PIT_SENAI_Windows_Forms.Modelo;
 
 namespace PIT_SENAI_Windows_Forms
 {
     public partial class Login : Form
     {
         //get bool firstLogin from database;
-        private bool firstLogin,ultimoPerfilMusico = true;
-        private bool perfilAtualMusico;
+        private bool ultimoPerfilMusico = true;
+        private bool firstLogin = true;
 
 
         Thread t1;
@@ -26,29 +28,25 @@ namespace PIT_SENAI_Windows_Forms
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            if (CheckLogin())
+            Controle controle = new Controle();
+            controle.acessar(txt_login.Text, txt_password.Text);
+            if (controle.mensagem.Equals(""))
             {
-                Enter();
-            }
-            else
-            {
-                lbl_noMatches.Text = "Login or password doesn't match";
-            }
-        }
 
-        private bool CheckLogin()
-        {
-            //check database, if username and password check, return true, else, return false
-            if (true)
-            {
-                return true;
+                if (controle.acesso)
+                {
+                    MessageBox.Show("Logado com Sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    Enter();
+                }
+                else MessageBox.Show("Login não encontrado\n" +
+                                    "Verifique credenciais", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            else return false;
+            else MessageBox.Show(controle.mensagem,"Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
         private void Enter()
         {
-            if (firstLogin)
+            if (!firstLogin)
             {
                 this.Close();
                 t1 = new Thread(abrirJanelaPerfis);
@@ -57,11 +55,12 @@ namespace PIT_SENAI_Windows_Forms
             }
             else
             {
-                if (ultimoPerfilMusico)
-                {
-                    perfilAtualMusico = true;
-                }
-                else perfilAtualMusico = false;
+                //Janela Principal
+
+                this.Close();
+                t1 = new Thread(abrirJanelaPrincipal);
+                t1.SetApartmentState(ApartmentState.STA);
+                t1.Start();
             }
         }
 
@@ -81,6 +80,11 @@ namespace PIT_SENAI_Windows_Forms
         private void abrirJanelaPerfis()
         {
             Application.Run(new Perfis());
+        }
+
+        private void abrirJanelaPrincipal()
+        {
+            Application.Run(new Principal());
         }
 
         private void txt_password_TextChanged(object sender, EventArgs e)

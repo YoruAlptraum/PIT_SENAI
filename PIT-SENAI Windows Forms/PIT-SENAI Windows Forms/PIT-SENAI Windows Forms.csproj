@@ -46,34 +46,44 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cadastrar.cs" />
-    <Compile Include="Cadastro.cs">
+    <Compile Include="DAL\Cadastrar.cs" />
+    <Compile Include="DAL\Logar.cs" />
+    <Compile Include="Interfaces\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cadastro.Designer.cs">
+    <Compile Include="Interfaces\Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="Conexao.cs" />
-    <Compile Include="User.cs" />
-    <Compile Include="Login.cs">
+    <Compile Include="DAL\Conexao.cs" />
+    <Compile Include="Interfaces\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Interfaces\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
-    <Compile Include="Perfis.cs">
+    <Compile Include="Interfaces\Perfis.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Perfis.Designer.cs">
+    <Compile Include="Interfaces\Perfis.Designer.cs">
       <DependentUpon>Perfis.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\Principal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\Principal.Designer.cs">
+      <DependentUpon>Principal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cadastro.resx">
+    <EmbeddedResource Include="Interfaces\Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Interfaces\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\Principal.resx">
+      <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -84,10 +94,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Perfis.dje.resx">
+    <EmbeddedResource Include="Interfaces\Perfis.dje.resx">
       <DependentUpon>Perfis.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Perfis.resx">
+    <EmbeddedResource Include="Interfaces\Perfis.resx">
       <DependentUpon>Perfis.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">

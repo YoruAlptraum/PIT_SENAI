@@ -34,7 +34,7 @@ namespace PIT_SENAI_Windows_Forms
                 //receber endereço do bando de dados onde o comando será executado
                 cmd.Connection = conexao.Conectar();
 
-                //executar o Comando Sql
+                //apenas executa o Comando Sql, não guarda informações
                 cmd.ExecuteNonQuery();
 
                 //desconectar o banco de dados -- Desconectar
