@@ -30,28 +30,29 @@ namespace PIT_SENAI_Windows_Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfis));
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btn_perfilMusico = new System.Windows.Forms.Button();
+            this.btn_perfilOrganizador = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // button1
+            // btn_perfilMusico
             // 
-            resources.ApplyResources(this.button1, "button1");
-            this.button1.Name = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_perfilMusico, "btn_perfilMusico");
+            this.btn_perfilMusico.Name = "btn_perfilMusico";
+            this.btn_perfilMusico.UseVisualStyleBackColor = true;
+            this.btn_perfilMusico.Click += new System.EventHandler(this.btn_perfilMusico_Click);
             // 
-            // button2
+            // btn_perfilOrganizador
             // 
-            resources.ApplyResources(this.button2, "button2");
-            this.button2.Name = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            resources.ApplyResources(this.btn_perfilOrganizador, "btn_perfilOrganizador");
+            this.btn_perfilOrganizador.Name = "btn_perfilOrganizador";
+            this.btn_perfilOrganizador.UseVisualStyleBackColor = true;
             // 
             // Perfis
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btn_perfilOrganizador);
+            this.Controls.Add(this.btn_perfilMusico);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Perfis";
             this.ResumeLayout(false);
@@ -60,7 +61,7 @@ namespace PIT_SENAI_Windows_Forms
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btn_perfilMusico;
+        private System.Windows.Forms.Button btn_perfilOrganizador;
     }
 }

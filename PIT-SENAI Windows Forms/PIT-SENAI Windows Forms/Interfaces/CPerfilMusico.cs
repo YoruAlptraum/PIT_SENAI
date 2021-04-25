@@ -8,18 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace PIT_SENAI_Windows_Forms
+namespace PIT_SENAI_Windows_Forms.Interfaces
 {
-    public partial class Perfis : Form
+    public partial class CPerfilMusico : Form
     {
-        public Perfis()
+        public CPerfilMusico()
         {
             InitializeComponent();
-        }
-
-        private void btn_perfilMusico_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

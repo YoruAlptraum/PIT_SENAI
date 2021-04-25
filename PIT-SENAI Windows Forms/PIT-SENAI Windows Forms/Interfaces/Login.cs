@@ -30,9 +30,9 @@ namespace PIT_SENAI_Windows_Forms
         {
             Controle controle = new Controle();
             controle.acessar(txt_login.Text, txt_password.Text);
+
             if (controle.mensagem.Equals(""))
             {
-
                 if (controle.acesso)
                 {
                     MessageBox.Show("Logado com Sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -46,7 +46,7 @@ namespace PIT_SENAI_Windows_Forms
 
         private void Enter()
         {
-            if (!firstLogin)
+            if (firstLogin)
             {
                 this.Close();
                 t1 = new Thread(abrirJanelaPerfis);

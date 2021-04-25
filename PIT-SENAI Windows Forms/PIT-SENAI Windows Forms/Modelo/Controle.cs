@@ -22,8 +22,12 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             return acesso;
         }
 
-        public String cadastrar()
+        public String cadastrar(String nome, String usuario, String senha, String email, String cpf)
         {
+            Cadastrar cadastrar = new Cadastrar(nome, usuario, senha, email, cpf);
+
+            this.mensagem = cadastrar.mensagem;
+
             return mensagem;
         }
     }
