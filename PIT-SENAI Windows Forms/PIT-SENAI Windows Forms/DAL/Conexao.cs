@@ -13,7 +13,7 @@ namespace PIT_SENAI_Windows_Forms
         //Construtor
         public Conexao()
         {
-            con.ConnectionString = @"Data Source=DESKTOP-DTES10R\SQLEXPRESS;Initial Catalog=PIT_SENAI;Integrated Security=True";
+            con.ConnectionString = @"Data Source=DESKTOP-DTES10R\SQLSERVER14;Initial Catalog=PIT_SENAI;Integrated Security=True";
         }
         //Método Conectar
         public SqlConnection Conectar()

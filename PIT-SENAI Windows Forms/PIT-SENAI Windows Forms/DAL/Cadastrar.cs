@@ -18,8 +18,8 @@ namespace PIT_SENAI_Windows_Forms
         {
             //Comando Sql (SqlCommand) -- insert, update, delete --
             //usar parenteses caso não preencha todos os campos da tabela, do contrario, não é necessário.
-            cmd.CommandText = "insert into cadastro (nome, usuario, senha, email, cpf, firstLogin,temPerfilMusico,temPerfilOrganizador) " +
-                "values(@nome,@usuario,@senha,@email,@cpf,1,0,0)";
+            cmd.CommandText = "insert into cadastro (nome, usuario, senha, email, cpf, firstLogin) " +
+                "values(@nome,@usuario,@senha,@email,@cpf,1)";
 
             //parâmetros
             cmd.Parameters.AddWithValue("@nome",nome);
@@ -45,7 +45,7 @@ namespace PIT_SENAI_Windows_Forms
             }
             catch (SqlException e)
             {
-                this.mensagem = "Erro ao se conectar ao banco de dados";
+                this.mensagem = "Erro se conectar ao banco de dados";
             }
 
         }

@@ -17,6 +17,11 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             InitializeComponent();
         }
 
+        private void Principal_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Application.Exit();
