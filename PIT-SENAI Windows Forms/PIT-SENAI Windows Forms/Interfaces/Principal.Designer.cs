@@ -29,64 +29,24 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
-            this.btn_profileImage = new System.Windows.Forms.Button();
-            this.btn_Conf = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnProfileImage = new System.Windows.Forms.Button();
             this.lbl_perfilType = new System.Windows.Forms.Label();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnSair = new System.Windows.Forms.Button();
+            this.btnTrocarPerfil = new System.Windows.Forms.Button();
+            this.btnConf = new System.Windows.Forms.Button();
+            this.lblUser = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btn_profileImage
+            // btnProfileImage
             // 
-            this.btn_profileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_profileImage.Location = new System.Drawing.Point(882, 13);
-            this.btn_profileImage.Name = "btn_profileImage";
-            this.btn_profileImage.Size = new System.Drawing.Size(50, 50);
-            this.btn_profileImage.TabIndex = 0;
-            this.btn_profileImage.UseVisualStyleBackColor = true;
-            // 
-            // btn_Conf
-            // 
-            this.btn_Conf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_Conf.Location = new System.Drawing.Point(842, 69);
-            this.btn_Conf.Name = "btn_Conf";
-            this.btn_Conf.Size = new System.Drawing.Size(90, 35);
-            this.btn_Conf.TabIndex = 1;
-            this.btn_Conf.Text = "Configurações";
-            this.btn_Conf.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.Location = new System.Drawing.Point(842, 110);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(90, 35);
-            this.button2.TabIndex = 2;
-            this.button2.Text = "Trocar\r\nPerfil";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button3.Location = new System.Drawing.Point(842, 151);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(90, 35);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "Eventos";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button4.Location = new System.Drawing.Point(842, 192);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(90, 35);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "Sair";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.btnProfileImage.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnProfileImage.Location = new System.Drawing.Point(882, 12);
+            this.btnProfileImage.Name = "btnProfileImage";
+            this.btnProfileImage.Size = new System.Drawing.Size(50, 50);
+            this.btnProfileImage.TabIndex = 0;
+            this.btnProfileImage.UseVisualStyleBackColor = true;
             // 
             // lbl_perfilType
             // 
@@ -109,21 +69,73 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.listView1.TabIndex = 6;
             this.listView1.UseCompatibleStateImageBehavior = false;
             // 
+            // btnEventos
+            // 
+            this.btnEventos.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnEventos.Location = new System.Drawing.Point(832, 161);
+            this.btnEventos.Name = "btnEventos";
+            this.btnEventos.Size = new System.Drawing.Size(100, 40);
+            this.btnEventos.TabIndex = 3;
+            this.btnEventos.Text = "Eventos";
+            this.btnEventos.UseVisualStyleBackColor = true;
+            // 
+            // btnSair
+            // 
+            this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSair.Location = new System.Drawing.Point(832, 207);
+            this.btnSair.Name = "btnSair";
+            this.btnSair.Size = new System.Drawing.Size(100, 40);
+            this.btnSair.TabIndex = 4;
+            this.btnSair.Text = "Sair";
+            this.btnSair.UseVisualStyleBackColor = true;
+            this.btnSair.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // btnTrocarPerfil
+            // 
+            this.btnTrocarPerfil.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnTrocarPerfil.Location = new System.Drawing.Point(832, 115);
+            this.btnTrocarPerfil.Name = "btnTrocarPerfil";
+            this.btnTrocarPerfil.Size = new System.Drawing.Size(100, 40);
+            this.btnTrocarPerfil.TabIndex = 2;
+            this.btnTrocarPerfil.Text = "Trocar\r\nPerfil";
+            this.btnTrocarPerfil.UseVisualStyleBackColor = true;
+            // 
+            // btnConf
+            // 
+            this.btnConf.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnConf.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.btnConf.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.btnConf.Location = new System.Drawing.Point(832, 69);
+            this.btnConf.Name = "btnConf";
+            this.btnConf.Size = new System.Drawing.Size(100, 40);
+            this.btnConf.TabIndex = 1;
+            this.btnConf.Text = "Configurações";
+            this.btnConf.UseVisualStyleBackColor = false;
+            // 
+            // lblUser
+            // 
+            this.lblUser.AutoSize = true;
+            this.lblUser.Location = new System.Drawing.Point(821, 12);
+            this.lblUser.Name = "lblUser";
+            this.lblUser.Size = new System.Drawing.Size(55, 13);
+            this.lblUser.TabIndex = 7;
+            this.lblUser.Text = "Username";
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.lblUser);
+            this.Controls.Add(this.btnSair);
+            this.Controls.Add(this.btnTrocarPerfil);
+            this.Controls.Add(this.btnEventos);
+            this.Controls.Add(this.btnConf);
+            this.Controls.Add(this.btnProfileImage);
             this.Controls.Add(this.listView1);
             this.Controls.Add(this.lbl_perfilType);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.btn_Conf);
-            this.Controls.Add(this.btn_profileImage);
             this.Name = "Principal";
             this.Text = "Principal";
-            this.Load += new System.EventHandler(this.Principal_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -131,12 +143,13 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
 
         #endregion
 
-        private System.Windows.Forms.Button btn_profileImage;
-        private System.Windows.Forms.Button btn_Conf;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnProfileImage;
         private System.Windows.Forms.Label lbl_perfilType;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.Button btnSair;
+        private System.Windows.Forms.Button btnTrocarPerfil;
+        private System.Windows.Forms.Button btnConf;
+        private System.Windows.Forms.Label lblUser;
     }
 }
