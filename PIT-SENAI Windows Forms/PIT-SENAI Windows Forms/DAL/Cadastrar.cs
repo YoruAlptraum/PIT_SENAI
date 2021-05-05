@@ -41,7 +41,7 @@ namespace PIT_SENAI_Windows_Forms
                 conexao.Desconectar();
 
                 //mostrar mensagem de erro ou sucesso -- variavel
-                this.mensagem = "Cadastro enviado";
+                this.mensagem = "Cadastro realizado com sucesso!";
             }
             catch (SqlException e)
             {

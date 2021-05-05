@@ -46,6 +46,7 @@ namespace PIT_SENAI_Windows_Forms
             this.txt_cConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chk_showPassword = new System.Windows.Forms.CheckBox();
+            this.llbVoltarAoLogin = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // btn_enviarCadastro
@@ -223,11 +224,24 @@ namespace PIT_SENAI_Windows_Forms
             this.chk_showPassword.UseVisualStyleBackColor = true;
             this.chk_showPassword.CheckedChanged += new System.EventHandler(this.chk_showPassword_CheckedChanged);
             // 
+            // llbVoltarAoLogin
+            // 
+            this.llbVoltarAoLogin.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.llbVoltarAoLogin.AutoSize = true;
+            this.llbVoltarAoLogin.Location = new System.Drawing.Point(461, 345);
+            this.llbVoltarAoLogin.Name = "llbVoltarAoLogin";
+            this.llbVoltarAoLogin.Size = new System.Drawing.Size(103, 13);
+            this.llbVoltarAoLogin.TabIndex = 19;
+            this.llbVoltarAoLogin.TabStop = true;
+            this.llbVoltarAoLogin.Text = "Voltar a tela de login";
+            this.llbVoltarAoLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbDeVoltaAoLogin_LinkClicked);
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(573, 367);
+            this.Controls.Add(this.llbVoltarAoLogin);
             this.Controls.Add(this.chk_showPassword);
             this.Controls.Add(this.txt_cConfirmarSenha);
             this.Controls.Add(this.label5);
@@ -272,5 +286,6 @@ namespace PIT_SENAI_Windows_Forms
         private System.Windows.Forms.TextBox txt_cConfirmarSenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chk_showPassword;
+        private System.Windows.Forms.LinkLabel llbVoltarAoLogin;
     }
 }

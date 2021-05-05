@@ -34,7 +34,7 @@ namespace PIT_SENAI_Windows_Forms
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btn_login = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.llbCadastrar = new System.Windows.Forms.LinkLabel();
             this.lbl_noMatches = new System.Windows.Forms.Label();
             this.chk_showPassword = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
@@ -62,9 +62,9 @@ namespace PIT_SENAI_Windows_Forms
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(35, 42);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(33, 13);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Login";
+            this.label1.Text = "E-mail";
             // 
             // label2
             // 
@@ -88,17 +88,17 @@ namespace PIT_SENAI_Windows_Forms
             this.btn_login.UseVisualStyleBackColor = true;
             this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
-            // linkLabel1
+            // llbCadastrar
             // 
-            this.linkLabel1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(123, 200);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(109, 13);
-            this.linkLabel1.TabIndex = 5;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Cadastrar nova conta";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            this.llbCadastrar.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.llbCadastrar.AutoSize = true;
+            this.llbCadastrar.Location = new System.Drawing.Point(123, 200);
+            this.llbCadastrar.Name = "llbCadastrar";
+            this.llbCadastrar.Size = new System.Drawing.Size(109, 13);
+            this.llbCadastrar.TabIndex = 5;
+            this.llbCadastrar.TabStop = true;
+            this.llbCadastrar.Text = "Cadastrar nova conta";
+            this.llbCadastrar.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // lbl_noMatches
             // 
@@ -126,7 +126,7 @@ namespace PIT_SENAI_Windows_Forms
             this.ClientSize = new System.Drawing.Size(234, 222);
             this.Controls.Add(this.chk_showPassword);
             this.Controls.Add(this.lbl_noMatches);
-            this.Controls.Add(this.linkLabel1);
+            this.Controls.Add(this.llbCadastrar);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -147,7 +147,7 @@ namespace PIT_SENAI_Windows_Forms
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btn_login;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.LinkLabel llbCadastrar;
         private System.Windows.Forms.Label lbl_noMatches;
         private System.Windows.Forms.CheckBox chk_showPassword;
     }

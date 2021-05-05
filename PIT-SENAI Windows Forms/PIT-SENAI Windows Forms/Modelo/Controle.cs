@@ -9,8 +9,9 @@ namespace PIT_SENAI_Windows_Forms.Modelo
 {
     public class Controle
     {
-        public bool acesso;
+        public bool acesso,firstLogin;
         public string mensagem = "";
+        public string UserID,usuario;
         public bool acessar(String Login, String Senha)
         {
             Logar logar = new Logar();
@@ -18,6 +19,8 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             if (!logar.mensagem.Equals(""))
             {
                 this.mensagem = logar.mensagem;
+                UserID = logar.UserID;
+                usuario = logar.usuario;
             }
             return acesso;
         }

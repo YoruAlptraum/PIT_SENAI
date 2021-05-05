@@ -61,10 +61,13 @@ namespace PIT_SENAI_Windows_Forms
                 controle.cadastrar(txt_cNome.Text,txt_cUser.Text,txt_cSenha.Text,txt_cEmail.Text,txt_cCPF.Text);
                 MessageBox.Show(controle.mensagem);
 
-                this.Close();
-                t1 = new Thread(abrirJanelaLogin);
-                t1.SetApartmentState(ApartmentState.STA);
-                t1.Start();
+                if (controle.mensagem.Equals("Cadastro realizado com sucesso!"))
+                {
+                    this.Close();
+                    t1 = new Thread(abrirJanelaLogin);
+                    t1.SetApartmentState(ApartmentState.STA);
+                    t1.Start();
+                }
             }
             else
             {
@@ -75,6 +78,14 @@ namespace PIT_SENAI_Windows_Forms
         private void abrirJanelaLogin()
         {
             Application.Run(new Login());
+        }
+
+        private void llbDeVoltaAoLogin_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
+            t1 = new Thread(abrirJanelaLogin);
+            t1.SetApartmentState(ApartmentState.STA);
+            t1.Start();
         }
     }
 }

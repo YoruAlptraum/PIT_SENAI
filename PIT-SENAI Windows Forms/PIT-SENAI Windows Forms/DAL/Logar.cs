@@ -9,9 +9,11 @@ namespace PIT_SENAI_Windows_Forms.DAL
 {
     class Logar
     {
-        Conexao conexao = new Conexao();
         public string mensagem = "";
-        public bool acesso;
+        public string UserID,usuario;
+        public bool acesso,firstLogin;
+
+        Conexao conexao = new Conexao();
         SqlCommand cmd = new SqlCommand();
         SqlDataReader dr;
 
@@ -20,7 +22,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(senha))
             {
                 //procurar email e senha no banco de dados
-                cmd.CommandText = "select * from cadastro where email = @email and senha = @senha";
+                cmd.CommandText = "select id,usuario,firstLogin from cadastro where email = @email and senha = @senha";
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.Parameters.AddWithValue("@email", email);
 
@@ -30,8 +32,17 @@ namespace PIT_SENAI_Windows_Forms.DAL
 
                     //executa o comando SQL e guarda informações no systema atual
                     dr = cmd.ExecuteReader();
+                   
+
                     if (dr.HasRows) //se foi encontrado login e senha
                     {
+                        while (dr.Read())
+                        {
+                            UserID = dr.GetValue(0).ToString();
+                            usuario = dr.GetString(1);
+                            //firstLogin = dr.GetBoolean(2);
+                        }
+
                         acesso = true;
                     }
                 }
@@ -44,5 +55,6 @@ namespace PIT_SENAI_Windows_Forms.DAL
 
             return acesso;
         }
+
     }
 }

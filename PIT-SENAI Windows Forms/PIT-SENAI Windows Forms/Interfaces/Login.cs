@@ -10,15 +10,15 @@ using System.Windows.Forms;
 using System.Threading;
 using PIT_SENAI_Windows_Forms.Interfaces;
 using PIT_SENAI_Windows_Forms.Modelo;
+using System.Data.SqlClient;
 
 namespace PIT_SENAI_Windows_Forms
 {
     public partial class Login : Form
     {
-        //get bool firstLogin from database;
-        private bool ultimoPerfilMusico = true;
-        private bool firstLogin = true;
-
+        Conexao conexao = new Conexao();
+        SqlCommand cmd = new SqlCommand();
+        Controle controle = new Controle();
 
         Thread t1;
         public Login()
@@ -28,7 +28,6 @@ namespace PIT_SENAI_Windows_Forms
 
         private void btn_login_Click(object sender, EventArgs e)
         {
-            Controle controle = new Controle();
             controle.acessar(txt_login.Text, txt_password.Text);
 
             if (controle.mensagem.Equals(""))
@@ -36,7 +35,7 @@ namespace PIT_SENAI_Windows_Forms
                 if (controle.acesso)
                 {
                     MessageBox.Show("Logado com Sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    Enter();
+                    Entrar();
                 }
                 else MessageBox.Show("Login não encontrado\n" +
                                     "Verifique credenciais", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -44,8 +43,13 @@ namespace PIT_SENAI_Windows_Forms
             else MessageBox.Show(controle.mensagem,"Erro",MessageBoxButtons.OK,MessageBoxIcon.Error);
         }
 
-        private void Enter()
+        private void Entrar()
         {
+            bool firstLogin = controle.firstLogin;
+            string UserID = controle.UserID;
+            string usuario = controle.usuario;
+            MessageBox.Show(UserID,usuario);
+
             if (firstLogin)
             {
                 this.Close();
@@ -56,7 +60,6 @@ namespace PIT_SENAI_Windows_Forms
             else
             {
                 //Janela Principal
-
                 this.Close();
                 t1 = new Thread(abrirJanelaPrincipal);
                 t1.SetApartmentState(ApartmentState.STA);

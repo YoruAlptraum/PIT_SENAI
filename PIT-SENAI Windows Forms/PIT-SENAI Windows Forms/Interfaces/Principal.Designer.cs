@@ -37,6 +37,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnTrocarPerfil = new System.Windows.Forms.Button();
             this.btnConf = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
+            this.btnLogOff = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnProfileImage
@@ -82,13 +83,13 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // btnSair
             // 
             this.btnSair.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnSair.Location = new System.Drawing.Point(832, 207);
+            this.btnSair.Location = new System.Drawing.Point(832, 253);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(100, 40);
             this.btnSair.TabIndex = 4;
             this.btnSair.Text = "Sair";
             this.btnSair.UseVisualStyleBackColor = true;
-            this.btnSair.Click += new System.EventHandler(this.button4_Click);
+            this.btnSair.Click += new System.EventHandler(this.btnSair_Click);
             // 
             // btnTrocarPerfil
             // 
@@ -99,6 +100,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnTrocarPerfil.TabIndex = 2;
             this.btnTrocarPerfil.Text = "Trocar\r\nPerfil";
             this.btnTrocarPerfil.UseVisualStyleBackColor = true;
+            this.btnTrocarPerfil.Click += new System.EventHandler(this.btnTrocarPerfil_Click);
             // 
             // btnConf
             // 
@@ -121,11 +123,23 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lblUser.TabIndex = 7;
             this.lblUser.Text = "Username";
             // 
+            // btnLogOff
+            // 
+            this.btnLogOff.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnLogOff.Location = new System.Drawing.Point(832, 207);
+            this.btnLogOff.Name = "btnLogOff";
+            this.btnLogOff.Size = new System.Drawing.Size(100, 40);
+            this.btnLogOff.TabIndex = 8;
+            this.btnLogOff.Text = "Log Off";
+            this.btnLogOff.UseVisualStyleBackColor = true;
+            this.btnLogOff.Click += new System.EventHandler(this.btnLogOff_Click);
+            // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(944, 501);
+            this.Controls.Add(this.btnLogOff);
             this.Controls.Add(this.lblUser);
             this.Controls.Add(this.btnSair);
             this.Controls.Add(this.btnTrocarPerfil);
@@ -151,5 +165,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.Button btnTrocarPerfil;
         private System.Windows.Forms.Button btnConf;
         private System.Windows.Forms.Label lblUser;
+        private System.Windows.Forms.Button btnLogOff;
     }
 }
