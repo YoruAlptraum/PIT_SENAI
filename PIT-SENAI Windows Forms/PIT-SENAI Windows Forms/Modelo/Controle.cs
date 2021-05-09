@@ -11,7 +11,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
     {
         public bool acesso,firstLogin;
         public string mensagem = "";
-        public string UserID,usuario;
+        public string id,usuario;
         public bool acessar(String Login, String Senha)
         {
             Logar logar = new Logar();
@@ -19,7 +19,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             if (!logar.mensagem.Equals(""))
             {
                 this.mensagem = logar.mensagem;
-                UserID = logar.UserID;
+                id = logar.id;
                 usuario = logar.usuario;
             }
             return acesso;

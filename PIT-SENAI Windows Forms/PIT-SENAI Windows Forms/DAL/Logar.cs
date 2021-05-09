@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
@@ -10,7 +11,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
     class Logar
     {
         public string mensagem = "";
-        public string UserID,usuario;
+        public string id,usuario;
         public bool acesso,firstLogin;
 
         Conexao conexao = new Conexao();
@@ -19,6 +20,14 @@ namespace PIT_SENAI_Windows_Forms.DAL
 
         public bool verificarLogin(string email, string senha)
         {
+
+            //Create a SqlDataAdapter for the Suppliers table.
+            SqlDataAdapter adapter = new SqlDataAdapter();
+            // Fill the DataSet.
+            DataSet dataSet = new DataSet("Cadastro");
+            adapter.Fill(dataSet);
+
+
             if (!string.IsNullOrEmpty(email) && !string.IsNullOrEmpty(senha))
             {
                 //procurar email e senha no banco de dados
@@ -38,9 +47,9 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     {
                         while (dr.Read())
                         {
-                            UserID = dr.GetValue(0).ToString();
+                            id = dr.GetValue(0).ToString();
                             usuario = dr.GetString(1);
-                            //firstLogin = dr.GetBoolean(2);
+                            firstLogin = dr.GetBoolean(2);
                         }
 
                         acesso = true;

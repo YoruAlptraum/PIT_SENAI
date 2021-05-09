@@ -16,8 +16,6 @@ namespace PIT_SENAI_Windows_Forms
 {
     public partial class Login : Form
     {
-        Conexao conexao = new Conexao();
-        SqlCommand cmd = new SqlCommand();
         Controle controle = new Controle();
 
         Thread t1;
@@ -46,7 +44,7 @@ namespace PIT_SENAI_Windows_Forms
         private void Entrar()
         {
             bool firstLogin = controle.firstLogin;
-            string UserID = controle.UserID;
+            string UserID = controle.id;
             string usuario = controle.usuario;
             MessageBox.Show(UserID,usuario);
 
