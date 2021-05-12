@@ -54,7 +54,7 @@ namespace PIT_SENAI_Windows_Forms
         {
             Controle controle = new Controle();
 
-            if (chk_deMaior.Checked && chk_termos.Checked && txt_cSenha.Text.Equals(txt_cConfirmarSenha.Text) &&
+            if (chk_termos.Checked && txt_cSenha.Text.Equals(txt_cConfirmarSenha.Text) &&
                 !string.IsNullOrEmpty(txt_cNome.Text) && !string.IsNullOrEmpty(txt_cUser.Text) && 
                 !string.IsNullOrEmpty(txt_cSenha.Text) && !string.IsNullOrEmpty(txt_cEmail.Text) && !string.IsNullOrEmpty(txt_cCPF.Text) )
             {

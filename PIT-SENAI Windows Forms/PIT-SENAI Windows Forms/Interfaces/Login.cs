@@ -44,12 +44,10 @@ namespace PIT_SENAI_Windows_Forms
         private void Entrar()
         {
             bool firstLogin = controle.firstLogin;
-            string UserID = controle.id;
-            string usuario = controle.usuario;
-            MessageBox.Show(UserID,usuario);
 
             if (firstLogin)
             {
+                //Janela Perfis
                 this.Close();
                 t1 = new Thread(abrirJanelaPerfis);
                 t1.SetApartmentState(ApartmentState.STA);
