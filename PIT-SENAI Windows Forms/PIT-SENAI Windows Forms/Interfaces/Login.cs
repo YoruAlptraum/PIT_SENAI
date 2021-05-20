@@ -32,7 +32,6 @@ namespace PIT_SENAI_Windows_Forms
             {
                 if (controle.acesso)
                 {
-                    MessageBox.Show("Logado com Sucesso", "Entrando", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     Entrar();
                 }
                 else MessageBox.Show("Login não encontrado\n" +

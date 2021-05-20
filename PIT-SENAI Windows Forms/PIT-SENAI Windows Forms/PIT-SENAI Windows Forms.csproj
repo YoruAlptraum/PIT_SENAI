@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAL\Cadastrar.cs" />
+    <Compile Include="DAL\CadastrarMusico.cs" />
     <Compile Include="DAL\Logar.cs" />
     <Compile Include="Interfaces\Cadastro.cs">
       <SubType>Form</SubType>

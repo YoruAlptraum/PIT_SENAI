@@ -30,7 +30,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
                 da = new SqlDataAdapter(cmd);
 
                 //procurar email e senha no banco de dados
-                cmd.CommandText = "select id,usuario,firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador" +
+                cmd.CommandText = "select id,usuario,firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador " +
                     "from cadastro where email = @email and senha = @senha";
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.Parameters.AddWithValue("@email", email);
@@ -53,11 +53,10 @@ namespace PIT_SENAI_Windows_Forms.DAL
                         //retorna o acesso como true
                         acesso = true;
                     }
-                    conexao.Desconectar();
                 }
                 catch (SqlException Erro)
                 {
-                    this.mensagem = "Erro com o banco de dados";
+                    this.mensagem = Erro.ToString();
                     Debug.WriteLine(Erro.ToString());
                 }
             }
