@@ -42,7 +42,7 @@ namespace PIT_SENAI_Windows_Forms
 
         private void Entrar()
         {
-            bool firstLogin = controle.firstLogin;
+            bool firstLogin = Controle.firstLogin;
 
             if (firstLogin)
             {

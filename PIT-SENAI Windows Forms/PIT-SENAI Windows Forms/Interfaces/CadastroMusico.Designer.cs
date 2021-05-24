@@ -39,7 +39,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.cmbEstiloMusical = new System.Windows.Forms.ComboBox();
             this.btnAddInst = new System.Windows.Forms.Button();
             this.btnAddEstilo = new System.Windows.Forms.Button();
-            this.lvwIntrumentos = new System.Windows.Forms.ListView();
+            this.lvwInstrumentos = new System.Windows.Forms.ListView();
             this.btnRemoveInst = new System.Windows.Forms.Button();
             this.btnRemoverEstilo = new System.Windows.Forms.Button();
             this.lvwEstilosMusicais = new System.Windows.Forms.ListView();
@@ -89,6 +89,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnEnviar.TabIndex = 8;
             this.btnEnviar.Text = "Enviar";
             this.btnEnviar.UseVisualStyleBackColor = true;
+            this.btnEnviar.Click += new System.EventHandler(this.btnEnviar_Click);
             // 
             // llbVoltar
             // 
@@ -130,6 +131,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnAddInst.TabIndex = 13;
             this.btnAddInst.Text = "Adicionar";
             this.btnAddInst.UseVisualStyleBackColor = true;
+            this.btnAddInst.Click += new System.EventHandler(this.btnAddInst_Click);
             // 
             // btnAddEstilo
             // 
@@ -139,15 +141,18 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnAddEstilo.TabIndex = 15;
             this.btnAddEstilo.Text = "Adicionar";
             this.btnAddEstilo.UseVisualStyleBackColor = true;
+            this.btnAddEstilo.Click += new System.EventHandler(this.btnAddEstilo_Click);
             // 
-            // lvwIntrumentos
+            // lvwInstrumentos
             // 
-            this.lvwIntrumentos.HideSelection = false;
-            this.lvwIntrumentos.Location = new System.Drawing.Point(56, 94);
-            this.lvwIntrumentos.Name = "lvwIntrumentos";
-            this.lvwIntrumentos.Size = new System.Drawing.Size(512, 90);
-            this.lvwIntrumentos.TabIndex = 16;
-            this.lvwIntrumentos.UseCompatibleStateImageBehavior = false;
+            this.lvwInstrumentos.HideSelection = false;
+            this.lvwInstrumentos.Location = new System.Drawing.Point(56, 94);
+            this.lvwInstrumentos.Name = "lvwInstrumentos";
+            this.lvwInstrumentos.Size = new System.Drawing.Size(512, 90);
+            this.lvwInstrumentos.TabIndex = 16;
+            this.lvwInstrumentos.UseCompatibleStateImageBehavior = false;
+            this.lvwInstrumentos.View = System.Windows.Forms.View.List;
+            this.lvwInstrumentos.SelectedIndexChanged += new System.EventHandler(this.lvwInstrumentos_SelectedIndexChanged);
             // 
             // btnRemoveInst
             // 
@@ -157,6 +162,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnRemoveInst.TabIndex = 17;
             this.btnRemoveInst.Text = "Remover";
             this.btnRemoveInst.UseVisualStyleBackColor = true;
+            this.btnRemoveInst.Click += new System.EventHandler(this.btnRemoveInst_Click);
             // 
             // btnRemoverEstilo
             // 
@@ -166,6 +172,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnRemoverEstilo.TabIndex = 18;
             this.btnRemoverEstilo.Text = "Remover";
             this.btnRemoverEstilo.UseVisualStyleBackColor = true;
+            this.btnRemoverEstilo.Click += new System.EventHandler(this.btnRemoverEstilo_Click);
             // 
             // lvwEstilosMusicais
             // 
@@ -175,6 +182,8 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lvwEstilosMusicais.Size = new System.Drawing.Size(512, 90);
             this.lvwEstilosMusicais.TabIndex = 19;
             this.lvwEstilosMusicais.UseCompatibleStateImageBehavior = false;
+            this.lvwEstilosMusicais.View = System.Windows.Forms.View.List;
+            this.lvwEstilosMusicais.SelectedIndexChanged += new System.EventHandler(this.lvwEstilosMusicais_SelectedIndexChanged);
             // 
             // txbRegiao
             // 
@@ -202,7 +211,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.lvwEstilosMusicais);
             this.Controls.Add(this.btnRemoverEstilo);
             this.Controls.Add(this.btnRemoveInst);
-            this.Controls.Add(this.lvwIntrumentos);
+            this.Controls.Add(this.lvwInstrumentos);
             this.Controls.Add(this.btnAddEstilo);
             this.Controls.Add(this.btnAddInst);
             this.Controls.Add(this.cmbEstiloMusical);
@@ -235,7 +244,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.ComboBox cmbEstiloMusical;
         private System.Windows.Forms.Button btnAddInst;
         private System.Windows.Forms.Button btnAddEstilo;
-        private System.Windows.Forms.ListView lvwIntrumentos;
+        private System.Windows.Forms.ListView lvwInstrumentos;
         private System.Windows.Forms.Button btnRemoveInst;
         private System.Windows.Forms.Button btnRemoverEstilo;
         private System.Windows.Forms.ListView lvwEstilosMusicais;

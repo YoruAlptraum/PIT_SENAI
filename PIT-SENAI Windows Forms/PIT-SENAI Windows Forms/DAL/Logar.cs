@@ -12,8 +12,9 @@ namespace PIT_SENAI_Windows_Forms.DAL
     class Logar
     {
         public string mensagem = "";
-        public string id,usuario;
-        public bool acesso,firstLogin,ultimoPerfilMusico,temPerfilMusico,temPerfilOrganizador;
+        static public string usuario;
+        static public int userid;
+        public bool acesso,firstLogin,temPerfilMusico,temPerfilOrganizador;
 
         Conexao conexao = new Conexao();
         static SqlCommand cmd = new SqlCommand();
@@ -21,6 +22,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         // Create the DataSet.
         DataTable dt = new DataTable("Cadastro");
+        AlterarPerfil ap = new AlterarPerfil();
 
         public bool verificarLogin(string email, string senha)
         {
@@ -46,10 +48,12 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     {
                         //conferir se firstLogin no banco
                         if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["firstLogin"],0)) this.firstLogin = true;
-                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["ultimoPerfilMusico"], 0)) this.ultimoPerfilMusico = true;
+                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["ultimoPerfilMusico"], 0))ap.AlterarUltimoPerfil(true);
+                        else ap.AlterarUltimoPerfil(false);
                         if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilMusico"], 0)) this.temPerfilMusico = true;
                         if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilOrganizador"], 0)) this.temPerfilOrganizador = true;
-                        Debug.WriteLine((dt.Rows[0]["firstLogin"].ToString()));
+                        userid = int.Parse(dt.Rows[0]["id"].ToString());
+                        usuario = dt.Rows[0]["usuario"].ToString();
                         //retorna o acesso como true
                         acesso = true;
                     }
@@ -64,6 +68,5 @@ namespace PIT_SENAI_Windows_Forms.DAL
 
             return acesso;
         }
-
     }
 }

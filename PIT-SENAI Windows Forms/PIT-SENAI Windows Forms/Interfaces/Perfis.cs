@@ -15,26 +15,27 @@ namespace PIT_SENAI_Windows_Forms
 {
     public partial class Perfis : Form
     {
-        Controle controle = new Controle();
         Thread t1;
-
+        Controle c = new Controle();
         bool temPerfilOrganizador, temPerfilMusico;
         public Perfis()
         {
             InitializeComponent();
-            this.temPerfilMusico = controle.temPerfilMusico;
-            this.temPerfilOrganizador = controle.temPerfilOrganizador;
+            this.temPerfilMusico = Controle.temPerfilMusico;
+            this.temPerfilOrganizador = Controle.temPerfilOrganizador;
         }
 
         private void btnMusico_Click(object sender, EventArgs e)
         {
             if (temPerfilMusico)
             {
+                //alterar ultimoPerfilMusico para true;
+                c.AlterarUltimoPerfil(true);
                 //abre Interface Principal com o Perfil Músico
                 this.Close();
                 t1 = new Thread(AbrirJanelaPrincipal);
                 t1.SetApartmentState(ApartmentState.STA);
-                t1.Start();
+                t1.Start();                
             }
             else
             {
@@ -50,6 +51,8 @@ namespace PIT_SENAI_Windows_Forms
         {
             if (temPerfilOrganizador)
             {
+                //alterar ultimoPerfilMusico para false;
+                c.AlterarUltimoPerfil(false);
                 //abre Interface Principal com o Perfil Organizador
                 this.Close();
                 t1 = new Thread(AbrirJanelaPrincipal);

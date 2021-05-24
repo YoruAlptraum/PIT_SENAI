@@ -53,7 +53,7 @@ namespace PIT_SENAI_Windows_Forms
             this.btn_enviarCadastro.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_enviarCadastro.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_enviarCadastro.Location = new System.Drawing.Point(13, 368);
-            this.btn_enviarCadastro.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_enviarCadastro.Margin = new System.Windows.Forms.Padding(4);
             this.btn_enviarCadastro.Name = "btn_enviarCadastro";
             this.btn_enviarCadastro.Size = new System.Drawing.Size(100, 37);
             this.btn_enviarCadastro.TabIndex = 8;
@@ -65,7 +65,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_cNome.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cNome.Location = new System.Drawing.Point(114, 93);
-            this.txt_cNome.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cNome.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cNome.Name = "txt_cNome";
             this.txt_cNome.Size = new System.Drawing.Size(555, 23);
             this.txt_cNome.TabIndex = 1;
@@ -75,7 +75,7 @@ namespace PIT_SENAI_Windows_Forms
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(10, 93);
+            this.label1.Location = new System.Drawing.Point(12, 93);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(49, 17);
@@ -99,18 +99,18 @@ namespace PIT_SENAI_Windows_Forms
             this.label3.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(12, 125);
+            this.label3.Location = new System.Drawing.Point(10, 125);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 17);
+            this.label3.Size = new System.Drawing.Size(96, 17);
             this.label3.TabIndex = 4;
-            this.label3.Text = "User:";
+            this.label3.Text = "Nome de tela:";
             // 
             // txt_cUser
             // 
             this.txt_cUser.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cUser.Location = new System.Drawing.Point(114, 125);
-            this.txt_cUser.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cUser.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cUser.Name = "txt_cUser";
             this.txt_cUser.Size = new System.Drawing.Size(555, 23);
             this.txt_cUser.TabIndex = 2;
@@ -120,7 +120,7 @@ namespace PIT_SENAI_Windows_Forms
             this.label4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 162);
+            this.label4.Location = new System.Drawing.Point(11, 162);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 17);
@@ -131,7 +131,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_cSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cSenha.Location = new System.Drawing.Point(114, 162);
-            this.txt_cSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cSenha.Name = "txt_cSenha";
             this.txt_cSenha.Size = new System.Drawing.Size(555, 23);
             this.txt_cSenha.TabIndex = 3;
@@ -141,7 +141,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_cCPF.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cCPF.Location = new System.Drawing.Point(114, 308);
-            this.txt_cCPF.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cCPF.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cCPF.Name = "txt_cCPF";
             this.txt_cCPF.Size = new System.Drawing.Size(555, 23);
             this.txt_cCPF.TabIndex = 6;
@@ -174,7 +174,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_cEmail.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cEmail.Location = new System.Drawing.Point(114, 271);
-            this.txt_cEmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cEmail.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cEmail.Name = "txt_cEmail";
             this.txt_cEmail.Size = new System.Drawing.Size(555, 23);
             this.txt_cEmail.TabIndex = 5;
@@ -185,7 +185,7 @@ namespace PIT_SENAI_Windows_Forms
             this.chk_termos.AutoSize = true;
             this.chk_termos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.chk_termos.Location = new System.Drawing.Point(14, 339);
-            this.chk_termos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_termos.Margin = new System.Windows.Forms.Padding(4);
             this.chk_termos.Name = "chk_termos";
             this.chk_termos.Size = new System.Drawing.Size(447, 21);
             this.chk_termos.TabIndex = 7;
@@ -196,7 +196,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_cConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_cConfirmarSenha.Location = new System.Drawing.Point(114, 211);
-            this.txt_cConfirmarSenha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_cConfirmarSenha.Margin = new System.Windows.Forms.Padding(4);
             this.txt_cConfirmarSenha.Name = "txt_cConfirmarSenha";
             this.txt_cConfirmarSenha.Size = new System.Drawing.Size(555, 23);
             this.txt_cConfirmarSenha.TabIndex = 4;
@@ -219,7 +219,7 @@ namespace PIT_SENAI_Windows_Forms
             this.chk_showPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chk_showPassword.AutoSize = true;
             this.chk_showPassword.Location = new System.Drawing.Point(528, 243);
-            this.chk_showPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_showPassword.Margin = new System.Windows.Forms.Padding(4);
             this.chk_showPassword.Name = "chk_showPassword";
             this.chk_showPassword.Size = new System.Drawing.Size(137, 20);
             this.chk_showPassword.TabIndex = 18;
@@ -264,7 +264,7 @@ namespace PIT_SENAI_Windows_Forms
             this.Controls.Add(this.btn_enviarCadastro);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cadastro";
             this.Text = "Cadastro";
             this.ResumeLayout(false);
