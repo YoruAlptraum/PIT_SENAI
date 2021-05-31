@@ -42,7 +42,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_login.Location = new System.Drawing.Point(14, 89);
-            this.txt_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_login.Margin = new System.Windows.Forms.Padding(4);
             this.txt_login.Name = "txt_login";
             this.txt_login.Size = new System.Drawing.Size(216, 23);
             this.txt_login.TabIndex = 0;
@@ -51,7 +51,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.txt_password.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.txt_password.Location = new System.Drawing.Point(14, 137);
-            this.txt_password.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txt_password.Margin = new System.Windows.Forms.Padding(4);
             this.txt_password.Name = "txt_password";
             this.txt_password.Size = new System.Drawing.Size(216, 23);
             this.txt_password.TabIndex = 1;
@@ -83,7 +83,7 @@ namespace PIT_SENAI_Windows_Forms
             // 
             this.btn_login.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.btn_login.Location = new System.Drawing.Point(131, 198);
-            this.btn_login.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btn_login.Margin = new System.Windows.Forms.Padding(4);
             this.btn_login.Name = "btn_login";
             this.btn_login.Size = new System.Drawing.Size(100, 38);
             this.btn_login.TabIndex = 4;
@@ -110,7 +110,7 @@ namespace PIT_SENAI_Windows_Forms
             this.chk_showPassword.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.chk_showPassword.AutoSize = true;
             this.chk_showPassword.Location = new System.Drawing.Point(96, 169);
-            this.chk_showPassword.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chk_showPassword.Margin = new System.Windows.Forms.Padding(4);
             this.chk_showPassword.Name = "chk_showPassword";
             this.chk_showPassword.Size = new System.Drawing.Size(130, 20);
             this.chk_showPassword.TabIndex = 7;
@@ -132,8 +132,9 @@ namespace PIT_SENAI_Windows_Forms
             this.Controls.Add(this.txt_login);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Login";
             this.ResumeLayout(false);
             this.PerformLayout();

@@ -15,14 +15,16 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
     public partial class Principal : Form
     {
         Thread t1;
-        bool ultimoPerfilMusico;
-        string usuario;
         public Principal()
         {
             InitializeComponent();
-            lblUser.Text = usuario = Controle.usuario;
+            lblUser.Text = Controle.usuario;
             if (Controle.ultimoPerfilMusico) lblPerfilType.Text = "Músico";
-            else lblPerfilType.Text = "Organizador";
+            else
+            {
+                lblPerfilType.Text = "Organizador";
+                btnEventos.Enabled = true;
+            }
         }
 
         private void btnSair_Click(object sender, EventArgs e)

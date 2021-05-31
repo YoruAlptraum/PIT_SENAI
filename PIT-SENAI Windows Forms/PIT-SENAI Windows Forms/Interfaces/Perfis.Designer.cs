@@ -32,6 +32,11 @@ namespace PIT_SENAI_Windows_Forms
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Perfis));
             this.btnMusico = new System.Windows.Forms.Button();
             this.btnOrganizador = new System.Windows.Forms.Button();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
+            this.splitContainer1.Panel1.SuspendLayout();
+            this.splitContainer1.Panel2.SuspendLayout();
+            this.splitContainer1.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnMusico
@@ -48,14 +53,30 @@ namespace PIT_SENAI_Windows_Forms
             this.btnOrganizador.UseVisualStyleBackColor = true;
             this.btnOrganizador.Click += new System.EventHandler(this.btnOrganizador_Click);
             // 
+            // splitContainer1
+            // 
+            resources.ApplyResources(this.splitContainer1, "splitContainer1");
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnMusico);
+            // 
+            // splitContainer1.Panel2
+            // 
+            this.splitContainer1.Panel2.Controls.Add(this.btnOrganizador);
+            // 
             // Perfis
             // 
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.btnOrganizador);
-            this.Controls.Add(this.btnMusico);
+            this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Perfis";
+            this.splitContainer1.Panel1.ResumeLayout(false);
+            this.splitContainer1.Panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
+            this.splitContainer1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -64,5 +85,6 @@ namespace PIT_SENAI_Windows_Forms
 
         private System.Windows.Forms.Button btnMusico;
         private System.Windows.Forms.Button btnOrganizador;
+        private System.Windows.Forms.SplitContainer splitContainer1;
     }
 }

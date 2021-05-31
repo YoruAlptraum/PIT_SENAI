@@ -105,6 +105,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroOrganizador";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Organizador";
             this.ResumeLayout(false);
             this.PerformLayout();

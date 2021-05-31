@@ -29,11 +29,8 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem2 = new System.Windows.Forms.ListViewItem("aaaa");
             this.btnProfileImage = new System.Windows.Forms.Button();
             this.lblPerfilType = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
-            this.columnHeader1 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.btnEventos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnTrocarPerfil = new System.Windows.Forms.Button();
@@ -47,7 +44,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.panel4 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnProfileImage
@@ -76,29 +72,10 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lblPerfilType.Text = "Tipo do Perfil";
             this.lblPerfilType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // listView1
-            // 
-            this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
-            this.columnHeader1});
-            this.listView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.listView1.HideSelection = false;
-            this.listView1.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem2});
-            this.listView1.Location = new System.Drawing.Point(0, 0);
-            this.listView1.Margin = new System.Windows.Forms.Padding(4);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(784, 392);
-            this.listView1.TabIndex = 6;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            this.listView1.View = System.Windows.Forms.View.Details;
-            // 
-            // columnHeader1
-            // 
-            this.columnHeader1.Width = 138;
-            // 
             // btnEventos
             // 
             this.btnEventos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnEventos.Enabled = false;
             this.btnEventos.FlatAppearance.BorderSize = 0;
             this.btnEventos.Location = new System.Drawing.Point(0, 118);
             this.btnEventos.Margin = new System.Windows.Forms.Padding(4);
@@ -214,19 +191,18 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // panel3
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel3.Location = new System.Drawing.Point(200, 0);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 69);
+            this.panel3.Size = new System.Drawing.Size(784, 461);
             this.panel3.TabIndex = 10;
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.listView1);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel4.Location = new System.Drawing.Point(200, 69);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(200, 399);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(784, 392);
+            this.panel4.Size = new System.Drawing.Size(784, 62);
             this.panel4.TabIndex = 11;
             // 
             // Principal
@@ -240,11 +216,11 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Principal";
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
-            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -253,7 +229,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
 
         private System.Windows.Forms.Button btnProfileImage;
         private System.Windows.Forms.Label lblPerfilType;
-        private System.Windows.Forms.ListView listView1;
         private System.Windows.Forms.Button btnEventos;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnTrocarPerfil;
@@ -264,7 +239,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ColumnHeader columnHeader1;
         private System.Windows.Forms.Panel panel4;
     }
 }

@@ -55,14 +55,14 @@ namespace PIT_SENAI_Windows_Forms.DAL
                 cmd.CommandText = @"insert into pmusico values (@id,@descriçao,@regiao)
                                     update cadastro set firstLogin = 0 where id = @id
                                     update cadastro set ultimoperfilmusico = 1 where id = @id
-                                    update cadastro set temperfilmusico =1 where id = @id";
+                                    update cadastro set temperfilmusico = 1 where id = @id";
                 cmd.Parameters.AddWithValue("@id", Logar.userid);
                 cmd.Parameters.AddWithValue("@descriçao", descriçao);
                 cmd.Parameters.AddWithValue("@regiao", regiao);
 
                 this.firstLogin = false;
-                ap.AlterarUltimoPerfil(true);
                 this.temPerfilMusico = true;
+                ap.AlterarUltimoPerfil(true);
 
                 //abrir a conexão
                 cmd.Connection = conexao.Conectar();
