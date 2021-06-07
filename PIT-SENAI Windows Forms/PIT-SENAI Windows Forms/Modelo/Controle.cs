@@ -11,7 +11,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
     public class Controle
     {
         public bool acesso, cadastrado;
-        public static bool firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador;
+        public static bool firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador,PMusicoPublico;
         public string mensagem = "";
         public static string usuario;
         public static int id;
@@ -19,6 +19,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
         AlterarPerfil ap = new AlterarPerfil();
         CadastrarOrganizador co = new CadastrarOrganizador();
         CadastrarMusico cm = new CadastrarMusico();
+        Eventos eventos = new Eventos();
 
         public bool acessar(String Login, String Senha)
         {
@@ -32,6 +33,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             ultimoPerfilMusico = AlterarPerfil.ultimoPerfilMusico;
             temPerfilMusico = logar.temPerfilMusico;
             temPerfilOrganizador = logar.temPerfilOrganizador;
+            PMusicoPublico = logar.PMusicoPublico;
             id = Logar.userid;
             usuario = Logar.usuario;
             return acesso;
@@ -59,9 +61,9 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             return mensagem;
         }
 
-        public String cadastrarMusico(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao)
+        public String cadastrarMusico(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao, bool publico)
         {
-            cm.Cadastrar(instrumentosID,estilosID,regiao,descriçao);
+            cm.Cadastrar(instrumentosID,estilosID,regiao,descriçao,publico);
             this.mensagem = cm.cmMensagem;
             this.cadastrado = cm.cadastrado;
 
@@ -83,8 +85,19 @@ namespace PIT_SENAI_Windows_Forms.Modelo
         }
         public void AlterarUltimoPerfil(bool upm)
         {
+            //alterar no banco de dados o ultimo perfil acessado, se o ultimo for musico altera para true
             ap.AlterarUltimoPerfil(upm);
             ultimoPerfilMusico = upm;
+        }
+
+        public DataTable EventosDosOrganizadores()
+        {
+            return eventos.EventosDosOrganizadores();
+        }
+
+        public DataTable ListaDeEventos()
+        {
+            return eventos.ListaDeEventos();
         }
     }
 }

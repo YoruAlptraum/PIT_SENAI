@@ -45,20 +45,21 @@ namespace PIT_SENAI_Windows_Forms.DAL
             return dt;
         }
 
-        public void Cadastrar(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao)
+        public void Cadastrar(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao,bool publico)
         {
             try
             {
                 //criar nova conexão
                 cmd = new SqlCommand();
 
-                cmd.CommandText = @"insert into pmusico values (@id,@descriçao,@regiao)
+                cmd.CommandText = @"insert into pmusico values (@id,@descriçao,@regiao,@publico)
                                     update cadastro set firstLogin = 0 where id = @id
                                     update cadastro set ultimoperfilmusico = 1 where id = @id
                                     update cadastro set temperfilmusico = 1 where id = @id";
                 cmd.Parameters.AddWithValue("@id", Logar.userid);
                 cmd.Parameters.AddWithValue("@descriçao", descriçao);
                 cmd.Parameters.AddWithValue("@regiao", regiao);
+                cmd.Parameters.AddWithValue("@publico", publico);
 
                 this.firstLogin = false;
                 this.temPerfilMusico = true;

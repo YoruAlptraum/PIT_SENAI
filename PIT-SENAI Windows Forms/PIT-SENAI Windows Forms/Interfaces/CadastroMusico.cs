@@ -185,7 +185,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
                         }
                     }
                 }
-                controle.cadastrarMusico(instrumentoID, estiloID, txbRegiao.Text, txbDescriçao.Text);
+                controle.cadastrarMusico(instrumentoID, estiloID, txbRegiao.Text, txbDescriçao.Text,!chkPublico.Checked);
                 MessageBox.Show(controle.mensagem);
                 if (controle.cadastrado)
                 {

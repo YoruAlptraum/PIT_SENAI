@@ -14,7 +14,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
         public string mensagem = "";
         static public string usuario;
         static public int userid;
-        public bool acesso,firstLogin,temPerfilMusico,temPerfilOrganizador;
+        public bool acesso,firstLogin,temPerfilMusico,temPerfilOrganizador,PMusicoPublico;
 
         Conexao conexao = new Conexao();
         static SqlCommand cmd = new SqlCommand();
@@ -32,8 +32,11 @@ namespace PIT_SENAI_Windows_Forms.DAL
                 da = new SqlDataAdapter(cmd);
 
                 //procurar email e senha no banco de dados
-                cmd.CommandText = "select id,usuario,firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador " +
-                    "from cadastro where email = @email and senha = @senha";
+                cmd.CommandText = @"
+                select c.id,c.usuario,c.firstLogin, c.ultimoPerfilMusico, c.temPerfilMusico, c.temPerfilOrganizador , pm.publico
+                from cadastro as c
+                inner join pmusico as pm on c.id = pm.id
+                where email = @email and senha = @senha ";
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.Parameters.AddWithValue("@email", email);
 
@@ -43,6 +46,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     cmd.Connection = conexao.Conectar();
                     //Passas as informações no da (data adapter) para dt (data table)
                     da.Fill(dt);
+                    conexao.Desconectar();
 
                     if (dt.Rows.Count > 0) //se foi encontrado login e senha
                     {
@@ -54,6 +58,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
                         if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilOrganizador"], 0)) this.temPerfilOrganizador = true;
                         userid = int.Parse(dt.Rows[0]["id"].ToString());
                         usuario = dt.Rows[0]["usuario"].ToString();
+                        PMusicoPublico = Convert.ToBoolean(dt.Rows[0]["publico"]);
                         //retorna o acesso como true
                         acesso = true;
                     }

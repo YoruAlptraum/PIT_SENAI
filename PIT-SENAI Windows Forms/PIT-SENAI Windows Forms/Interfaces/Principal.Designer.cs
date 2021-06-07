@@ -31,17 +31,17 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         {
             this.btnProfileImage = new System.Windows.Forms.Button();
             this.lblPerfilType = new System.Windows.Forms.Label();
-            this.btnEventos = new System.Windows.Forms.Button();
+            this.btnMeusEventos = new System.Windows.Forms.Button();
             this.btnSair = new System.Windows.Forms.Button();
             this.btnTrocarPerfil = new System.Windows.Forms.Button();
             this.btnConf = new System.Windows.Forms.Button();
             this.lblUser = new System.Windows.Forms.Label();
             this.btnLogOff = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnListar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.pnlPrincipal = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
@@ -72,24 +72,25 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lblPerfilType.Text = "Tipo do Perfil";
             this.lblPerfilType.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // btnEventos
+            // btnMeusEventos
             // 
-            this.btnEventos.Dock = System.Windows.Forms.DockStyle.Top;
-            this.btnEventos.Enabled = false;
-            this.btnEventos.FlatAppearance.BorderSize = 0;
-            this.btnEventos.Location = new System.Drawing.Point(0, 118);
-            this.btnEventos.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEventos.Name = "btnEventos";
-            this.btnEventos.Size = new System.Drawing.Size(200, 49);
-            this.btnEventos.TabIndex = 3;
-            this.btnEventos.Text = "Eventos";
-            this.btnEventos.UseVisualStyleBackColor = true;
+            this.btnMeusEventos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnMeusEventos.Enabled = false;
+            this.btnMeusEventos.FlatAppearance.BorderSize = 0;
+            this.btnMeusEventos.Location = new System.Drawing.Point(0, 118);
+            this.btnMeusEventos.Margin = new System.Windows.Forms.Padding(4);
+            this.btnMeusEventos.Name = "btnMeusEventos";
+            this.btnMeusEventos.Size = new System.Drawing.Size(200, 49);
+            this.btnMeusEventos.TabIndex = 3;
+            this.btnMeusEventos.Text = "Meus Eventos";
+            this.btnMeusEventos.UseVisualStyleBackColor = true;
+            this.btnMeusEventos.Click += new System.EventHandler(this.btnMeusEventos_Click);
             // 
             // btnSair
             // 
             this.btnSair.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnSair.FlatAppearance.BorderSize = 0;
-            this.btnSair.Location = new System.Drawing.Point(0, 265);
+            this.btnSair.Location = new System.Drawing.Point(0, 314);
             this.btnSair.Margin = new System.Windows.Forms.Padding(4);
             this.btnSair.Name = "btnSair";
             this.btnSair.Size = new System.Drawing.Size(200, 49);
@@ -139,7 +140,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             this.btnLogOff.Dock = System.Windows.Forms.DockStyle.Top;
             this.btnLogOff.FlatAppearance.BorderSize = 0;
-            this.btnLogOff.Location = new System.Drawing.Point(0, 216);
+            this.btnLogOff.Location = new System.Drawing.Point(0, 265);
             this.btnLogOff.Margin = new System.Windows.Forms.Padding(4);
             this.btnLogOff.Name = "btnLogOff";
             this.btnLogOff.Size = new System.Drawing.Size(200, 49);
@@ -152,15 +153,27 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             this.panel1.Controls.Add(this.btnSair);
             this.panel1.Controls.Add(this.btnLogOff);
+            this.panel1.Controls.Add(this.btnListar);
             this.panel1.Controls.Add(this.btnTrocarPerfil);
-            this.panel1.Controls.Add(this.btnEventos);
+            this.panel1.Controls.Add(this.btnMeusEventos);
             this.panel1.Controls.Add(this.btnConf);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 461);
+            this.panel1.Size = new System.Drawing.Size(200, 561);
             this.panel1.TabIndex = 9;
+            // 
+            // btnListar
+            // 
+            this.btnListar.Dock = System.Windows.Forms.DockStyle.Top;
+            this.btnListar.Location = new System.Drawing.Point(0, 216);
+            this.btnListar.Name = "btnListar";
+            this.btnListar.Size = new System.Drawing.Size(200, 49);
+            this.btnListar.TabIndex = 9;
+            this.btnListar.Text = "Listar Eventos/Musicos";
+            this.btnListar.UseVisualStyleBackColor = true;
+            this.btnListar.Click += new System.EventHandler(this.btnListar_Click);
             // 
             // panel2
             // 
@@ -189,29 +202,20 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.label1.Text = "Perfil:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // panel3
+            // pnlPrincipal
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(200, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(784, 461);
-            this.panel3.TabIndex = 10;
-            // 
-            // panel4
-            // 
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel4.Location = new System.Drawing.Point(200, 399);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(784, 62);
-            this.panel4.TabIndex = 11;
+            this.pnlPrincipal.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlPrincipal.Location = new System.Drawing.Point(200, 0);
+            this.pnlPrincipal.Name = "pnlPrincipal";
+            this.pnlPrincipal.Size = new System.Drawing.Size(784, 561);
+            this.pnlPrincipal.TabIndex = 10;
             // 
             // Principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(984, 461);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
+            this.ClientSize = new System.Drawing.Size(984, 561);
+            this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -229,7 +233,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
 
         private System.Windows.Forms.Button btnProfileImage;
         private System.Windows.Forms.Label lblPerfilType;
-        private System.Windows.Forms.Button btnEventos;
+        private System.Windows.Forms.Button btnMeusEventos;
         private System.Windows.Forms.Button btnSair;
         private System.Windows.Forms.Button btnTrocarPerfil;
         private System.Windows.Forms.Button btnConf;
@@ -237,8 +241,8 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.Button btnLogOff;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlPrincipal;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button btnListar;
     }
 }

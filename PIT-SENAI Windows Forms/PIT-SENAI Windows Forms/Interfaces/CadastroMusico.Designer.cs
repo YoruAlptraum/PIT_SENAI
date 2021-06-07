@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbDescriçao = new System.Windows.Forms.TextBox();
@@ -45,6 +46,8 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lvwEstilosMusicais = new System.Windows.Forms.ListView();
             this.txbRegiao = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.chkPublico = new System.Windows.Forms.CheckBox();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.SuspendLayout();
             // 
             // label1
@@ -201,11 +204,24 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.label6.TabIndex = 20;
             this.label6.Text = "Região:";
             // 
+            // chkPublico
+            // 
+            this.chkPublico.AutoSize = true;
+            this.chkPublico.Location = new System.Drawing.Point(56, 422);
+            this.chkPublico.Name = "chkPublico";
+            this.chkPublico.Size = new System.Drawing.Size(112, 20);
+            this.chkPublico.TabIndex = 22;
+            this.chkPublico.Text = "Perfil privado";
+            this.toolTip1.SetToolTip(this.chkPublico, "Ao marcar essa opção o seu perfil não irá aparecer para na busca de músicos,\r\nou " +
+        "seja te impedirá de receber propóstas para tocar em eventos.");
+            this.chkPublico.UseVisualStyleBackColor = true;
+            // 
             // CadastroMusico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(625, 523);
+            this.Controls.Add(this.chkPublico);
             this.Controls.Add(this.txbRegiao);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.lvwEstilosMusicais);
@@ -251,5 +267,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.ListView lvwEstilosMusicais;
         private System.Windows.Forms.TextBox txbRegiao;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.CheckBox chkPublico;
+        private System.Windows.Forms.ToolTip toolTip1;
     }
 }
