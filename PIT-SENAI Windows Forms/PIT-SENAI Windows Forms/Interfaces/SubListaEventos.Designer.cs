@@ -32,7 +32,9 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.chEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDescriçao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chLocalizaçao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chOrganizador = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.chContato = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -44,8 +46,12 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.lvwEventos.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.chEvento,
             this.chDescriçao,
-            this.chOrganizador});
+            this.chLocalizaçao,
+            this.chOrganizador,
+            this.chContato});
             this.lvwEventos.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.lvwEventos.FullRowSelect = true;
+            this.lvwEventos.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
             this.lvwEventos.HideSelection = false;
             this.lvwEventos.Location = new System.Drawing.Point(0, 52);
             this.lvwEventos.Name = "lvwEventos";
@@ -62,12 +68,22 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // chDescriçao
             // 
             this.chDescriçao.Text = "Descrição";
-            this.chDescriçao.Width = 486;
+            this.chDescriçao.Width = 258;
+            // 
+            // chLocalizaçao
+            // 
+            this.chLocalizaçao.Text = "Localização";
+            this.chLocalizaçao.Width = 115;
             // 
             // chOrganizador
             // 
             this.chOrganizador.Text = "Organizador";
             this.chOrganizador.Width = 167;
+            // 
+            // chContato
+            // 
+            this.chContato.Text = "Contato";
+            this.chContato.Width = 114;
             // 
             // panel1
             // 
@@ -125,5 +141,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ColumnHeader chLocalizaçao;
+        private System.Windows.Forms.ColumnHeader chContato;
     }
 }

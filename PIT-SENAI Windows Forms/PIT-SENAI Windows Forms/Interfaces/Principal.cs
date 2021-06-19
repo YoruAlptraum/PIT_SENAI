@@ -19,19 +19,26 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         public Principal()
         {
             InitializeComponent();
-            lblUser.Text = Controle.usuario;
+            UpdateUserName();
             perfilM = Controle.ultimoPerfilMusico;
             if (perfilM)
             {
                 lblPerfilType.Text = "Músico";
                 btnListar.Text = "Procurar Eventos";
+                OpenChild<SubListaEventos>();
             }
             else
             {
                 lblPerfilType.Text = "Organizador";
                 btnListar.Text = "Procurar Musicos";
                 btnMeusEventos.Enabled = true;
+                OpenChild<SubListaMusicos>();
             }
+        }
+        public void UpdateUserName()
+        {
+            Controle ct = new Controle();
+            lblUser.Text = ct.AtualizarUsuario();
         }
 
         private void btnSair_Click(object sender, EventArgs e)
@@ -65,6 +72,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         {
             Application.Run(new Perfis());
         }
+        static public Form subForm = new Form();
         //abrir um formulario secundario dentro do painel usar 'OpenChild<'nome do formulario'>();'
         void OpenChild<ChildForm>() where ChildForm : Form, new()
         {
@@ -89,19 +97,17 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
 
         private void btnListar_Click(object sender, EventArgs e)
         {
-            if (perfilM)
-            {
-                OpenChild<SubListaEventos>();
-            }
-            else
-            {
-                //OpenChild<SubListaMusicos>();
-                MessageBox.Show("not implemented");
-            }
+            if (perfilM) OpenChild<SubListaEventos>();
+            else OpenChild<SubListaMusicos>();
         }
         private void btnMeusEventos_Click(object sender, EventArgs e)
         {
             OpenChild<SubEventosDosOrganizadores>();
+        }
+
+        private void btnConf_Click(object sender, EventArgs e)
+        {
+            OpenChild<SubConfig>();
         }
     }
 }

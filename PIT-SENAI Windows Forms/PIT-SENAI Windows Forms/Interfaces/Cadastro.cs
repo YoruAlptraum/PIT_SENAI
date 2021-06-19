@@ -50,6 +50,7 @@ namespace PIT_SENAI_Windows_Forms
             }
         }
 
+
         private void btn_enviarCadastro_Click(object sender, EventArgs e)
         {
             Controle controle = new Controle();

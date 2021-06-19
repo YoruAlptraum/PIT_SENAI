@@ -18,7 +18,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
         //Create a SqlDataAdapter for the table Cadastro
         SqlDataAdapter da;
         //Create the DataSet.
-        public static DataTable dt;
+        public DataTable dt;
         public bool cadastrado,firstLogin,temPerfilMusico;
 
         public DataTable getInstrumentos()
@@ -45,20 +45,21 @@ namespace PIT_SENAI_Windows_Forms.DAL
             return dt;
         }
 
-        public void Cadastrar(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao,bool publico)
+        public void Cadastrar(List<int> instrumentosID, List<int> estilosID, string regiao, string descriçao,string contato,bool publico)
         {
             try
             {
                 //criar nova conexão
                 cmd = new SqlCommand();
 
-                cmd.CommandText = @"insert into pmusico values (@id,@descriçao,@regiao,@publico)
+                cmd.CommandText = @"insert into pmusico values (@id,@descriçao,@regiao,@publico,@contato)
                                     update cadastro set firstLogin = 0 where id = @id
                                     update cadastro set ultimoperfilmusico = 1 where id = @id
                                     update cadastro set temperfilmusico = 1 where id = @id";
                 cmd.Parameters.AddWithValue("@id", Logar.userid);
                 cmd.Parameters.AddWithValue("@descriçao", descriçao);
                 cmd.Parameters.AddWithValue("@regiao", regiao);
+                cmd.Parameters.AddWithValue("@contato", contato);
                 cmd.Parameters.AddWithValue("@publico", publico);
 
                 this.firstLogin = false;
@@ -79,12 +80,22 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     cmd.Parameters.AddWithValue("@musicoID", Logar.userid);
                     cmd.Parameters.AddWithValue("@instrumentoID", i);
 
-                    //abrir a conexão
-                    cmd.Connection = conexao.Conectar();
-                    //executar o comando
-                    cmd.ExecuteNonQuery();
-                    //fechar a conexão
-                    conexao.Desconectar();
+                    try
+                    {
+                        //abrir a conexão
+                        cmd.Connection = conexao.Conectar();
+                        //executar o comando
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch(SqlException e)
+                    {
+                        Debug.WriteLine(e.Message);
+                    }
+                    finally
+                    {
+                        //fechar a conexão
+                        conexao.Desconectar();
+                    }
                 }
 
                 foreach (var es in estilosID)
@@ -94,12 +105,22 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     cmd.Parameters.AddWithValue("@musicoID", Logar.userid);
                     cmd.Parameters.AddWithValue("@estiloID", es);
 
-                    //abrir a conexão
-                    cmd.Connection = conexao.Conectar();
-                    //executar o comando
-                    cmd.ExecuteNonQuery();
-                    //fechar a conexão
-                    conexao.Desconectar();
+                    try
+                    {
+                        //abrir a conexão
+                        cmd.Connection = conexao.Conectar();
+                        //executar o comando
+                        cmd.ExecuteNonQuery();
+                    }
+                    catch (SqlException e)
+                    {
+                        Debug.WriteLine(e.Message);
+                    }
+                    finally
+                    {
+                        //fechar a conexão
+                        conexao.Desconectar();
+                    }
                 }
                 this.cmMensagem = "Cadastro Realizado";
                 this.cadastrado = true;

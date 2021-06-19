@@ -125,6 +125,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnConf.TabIndex = 2;
             this.btnConf.Text = "Configurações";
             this.btnConf.UseVisualStyleBackColor = false;
+            this.btnConf.Click += new System.EventHandler(this.btnConf_Click);
             // 
             // lblUser
             // 

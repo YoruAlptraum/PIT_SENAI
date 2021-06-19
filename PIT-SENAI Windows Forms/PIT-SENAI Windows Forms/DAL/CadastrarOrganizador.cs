@@ -25,7 +25,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
                 //criar nova conexão
                 cmd = new SqlCommand();
 
-                cmd.CommandText = @"insert into porganizador values (@id,@descriçao,@regiao)
+                cmd.CommandText = @"insert into porganizador values (@descriçao,@regiao,@id)
                                     update cadastro set firstLogin = 0 where id = @id
                                     update cadastro set ultimoperfilmusico = 0 where id = @id
                                     update cadastro set temperfilorganizador =1 where id = @id";
@@ -49,8 +49,8 @@ namespace PIT_SENAI_Windows_Forms.DAL
             }
             catch (SqlException Erro)
             {
-                this.coMensagem = Erro.ToString();
-                Debug.WriteLine(Erro.ToString());
+                this.coMensagem = Erro.Message;
+                Debug.WriteLine(Erro.Message);
             }
         }
     }

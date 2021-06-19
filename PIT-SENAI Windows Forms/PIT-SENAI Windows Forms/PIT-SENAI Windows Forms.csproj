@@ -50,8 +50,10 @@
     <Compile Include="DAL\Cadastrar.cs" />
     <Compile Include="DAL\CadastrarMusico.cs" />
     <Compile Include="DAL\CadastrarOrganizador.cs" />
+    <Compile Include="DAL\Configuraçoes.cs" />
     <Compile Include="DAL\Eventos.cs" />
     <Compile Include="DAL\Logar.cs" />
+    <Compile Include="DAL\Musicos.cs" />
     <Compile Include="Interfaces\Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +91,12 @@
     <Compile Include="Interfaces\Principal.Designer.cs">
       <DependentUpon>Principal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Interfaces\SubConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\SubConfig.Designer.cs">
+      <DependentUpon>SubConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="Interfaces\SubEventosDosOrganizadores.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -100,6 +108,12 @@
     </Compile>
     <Compile Include="Interfaces\SubListaEventos.Designer.cs">
       <DependentUpon>SubListaEventos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\SubListaMusicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfaces\SubListaMusicos.Designer.cs">
+      <DependentUpon>SubListaMusicos.cs</DependentUpon>
     </Compile>
     <Compile Include="Modelo\Controle.cs" />
     <Compile Include="Program.cs" />
@@ -119,11 +133,17 @@
     <EmbeddedResource Include="Interfaces\Principal.resx">
       <DependentUpon>Principal.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\SubConfig.resx">
+      <DependentUpon>SubConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\SubEventosDosOrganizadores.resx">
       <DependentUpon>SubEventosDosOrganizadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Interfaces\SubListaEventos.resx">
       <DependentUpon>SubListaEventos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfaces\SubListaMusicos.resx">
+      <DependentUpon>SubListaMusicos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

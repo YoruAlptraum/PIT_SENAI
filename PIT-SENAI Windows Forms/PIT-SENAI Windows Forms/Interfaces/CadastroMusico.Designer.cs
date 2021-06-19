@@ -48,12 +48,14 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.label6 = new System.Windows.Forms.Label();
             this.chkPublico = new System.Windows.Forms.CheckBox();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.txbContato = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(53, 45);
+            this.label1.Location = new System.Drawing.Point(53, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(94, 16);
             this.label1.TabIndex = 0;
@@ -62,7 +64,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(53, 187);
+            this.label3.Location = new System.Drawing.Point(53, 170);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(102, 16);
             this.label3.TabIndex = 4;
@@ -70,7 +72,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // txbDescriçao
             // 
-            this.txbDescriçao.Location = new System.Drawing.Point(56, 393);
+            this.txbDescriçao.Location = new System.Drawing.Point(56, 376);
             this.txbDescriçao.Name = "txbDescriçao";
             this.txbDescriçao.Size = new System.Drawing.Size(512, 23);
             this.txbDescriçao.TabIndex = 7;
@@ -78,7 +80,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(53, 374);
+            this.label4.Location = new System.Drawing.Point(53, 357);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(78, 16);
             this.label4.TabIndex = 6;
@@ -86,7 +88,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // btnEnviar
             // 
-            this.btnEnviar.Location = new System.Drawing.Point(493, 422);
+            this.btnEnviar.Location = new System.Drawing.Point(493, 450);
             this.btnEnviar.Name = "btnEnviar";
             this.btnEnviar.Size = new System.Drawing.Size(75, 30);
             this.btnEnviar.TabIndex = 8;
@@ -98,7 +100,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             this.llbVoltar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.llbVoltar.AutoSize = true;
-            this.llbVoltar.Location = new System.Drawing.Point(482, 498);
+            this.llbVoltar.Location = new System.Drawing.Point(471, 489);
             this.llbVoltar.Name = "llbVoltar";
             this.llbVoltar.Size = new System.Drawing.Size(131, 16);
             this.llbVoltar.TabIndex = 9;
@@ -110,7 +112,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             this.cmbInstrumento.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbInstrumento.FormattingEnabled = true;
-            this.cmbInstrumento.Location = new System.Drawing.Point(56, 64);
+            this.cmbInstrumento.Location = new System.Drawing.Point(56, 47);
             this.cmbInstrumento.Name = "cmbInstrumento";
             this.cmbInstrumento.Size = new System.Drawing.Size(328, 24);
             this.cmbInstrumento.TabIndex = 10;
@@ -120,7 +122,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             this.cmbEstiloMusical.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbEstiloMusical.FormattingEnabled = true;
-            this.cmbEstiloMusical.Location = new System.Drawing.Point(56, 206);
+            this.cmbEstiloMusical.Location = new System.Drawing.Point(56, 189);
             this.cmbEstiloMusical.Name = "cmbEstiloMusical";
             this.cmbEstiloMusical.Size = new System.Drawing.Size(328, 24);
             this.cmbEstiloMusical.TabIndex = 12;
@@ -128,7 +130,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // btnAddInst
             // 
-            this.btnAddInst.Location = new System.Drawing.Point(390, 64);
+            this.btnAddInst.Location = new System.Drawing.Point(390, 47);
             this.btnAddInst.Name = "btnAddInst";
             this.btnAddInst.Size = new System.Drawing.Size(86, 24);
             this.btnAddInst.TabIndex = 13;
@@ -138,7 +140,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // btnAddEstilo
             // 
-            this.btnAddEstilo.Location = new System.Drawing.Point(390, 206);
+            this.btnAddEstilo.Location = new System.Drawing.Point(390, 189);
             this.btnAddEstilo.Name = "btnAddEstilo";
             this.btnAddEstilo.Size = new System.Drawing.Size(86, 24);
             this.btnAddEstilo.TabIndex = 15;
@@ -149,7 +151,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // lvwInstrumentos
             // 
             this.lvwInstrumentos.HideSelection = false;
-            this.lvwInstrumentos.Location = new System.Drawing.Point(56, 94);
+            this.lvwInstrumentos.Location = new System.Drawing.Point(56, 77);
             this.lvwInstrumentos.Name = "lvwInstrumentos";
             this.lvwInstrumentos.Size = new System.Drawing.Size(512, 90);
             this.lvwInstrumentos.TabIndex = 16;
@@ -159,7 +161,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // btnRemoveInst
             // 
-            this.btnRemoveInst.Location = new System.Drawing.Point(482, 63);
+            this.btnRemoveInst.Location = new System.Drawing.Point(482, 46);
             this.btnRemoveInst.Name = "btnRemoveInst";
             this.btnRemoveInst.Size = new System.Drawing.Size(86, 24);
             this.btnRemoveInst.TabIndex = 17;
@@ -169,7 +171,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // btnRemoverEstilo
             // 
-            this.btnRemoverEstilo.Location = new System.Drawing.Point(482, 206);
+            this.btnRemoverEstilo.Location = new System.Drawing.Point(482, 189);
             this.btnRemoverEstilo.Name = "btnRemoverEstilo";
             this.btnRemoverEstilo.Size = new System.Drawing.Size(86, 24);
             this.btnRemoverEstilo.TabIndex = 18;
@@ -180,7 +182,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // lvwEstilosMusicais
             // 
             this.lvwEstilosMusicais.HideSelection = false;
-            this.lvwEstilosMusicais.Location = new System.Drawing.Point(56, 236);
+            this.lvwEstilosMusicais.Location = new System.Drawing.Point(56, 219);
             this.lvwEstilosMusicais.Name = "lvwEstilosMusicais";
             this.lvwEstilosMusicais.Size = new System.Drawing.Size(512, 90);
             this.lvwEstilosMusicais.TabIndex = 19;
@@ -190,7 +192,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // 
             // txbRegiao
             // 
-            this.txbRegiao.Location = new System.Drawing.Point(56, 348);
+            this.txbRegiao.Location = new System.Drawing.Point(56, 331);
             this.txbRegiao.Name = "txbRegiao";
             this.txbRegiao.Size = new System.Drawing.Size(512, 23);
             this.txbRegiao.TabIndex = 21;
@@ -198,7 +200,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(53, 329);
+            this.label6.Location = new System.Drawing.Point(53, 312);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(57, 16);
             this.label6.TabIndex = 20;
@@ -207,7 +209,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             // chkPublico
             // 
             this.chkPublico.AutoSize = true;
-            this.chkPublico.Location = new System.Drawing.Point(56, 422);
+            this.chkPublico.Location = new System.Drawing.Point(56, 450);
             this.chkPublico.Name = "chkPublico";
             this.chkPublico.Size = new System.Drawing.Size(112, 20);
             this.chkPublico.TabIndex = 22;
@@ -216,11 +218,29 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         "seja te impedirá de receber propóstas para tocar em eventos.");
             this.chkPublico.UseVisualStyleBackColor = true;
             // 
+            // txbContato
+            // 
+            this.txbContato.Location = new System.Drawing.Point(56, 421);
+            this.txbContato.Name = "txbContato";
+            this.txbContato.Size = new System.Drawing.Size(512, 23);
+            this.txbContato.TabIndex = 24;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(53, 402);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(67, 16);
+            this.label2.TabIndex = 23;
+            this.label2.Text = "Contato:";
+            // 
             // CadastroMusico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(625, 523);
+            this.ClientSize = new System.Drawing.Size(614, 514);
+            this.Controls.Add(this.txbContato);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.chkPublico);
             this.Controls.Add(this.txbRegiao);
             this.Controls.Add(this.label6);
@@ -269,5 +289,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.CheckBox chkPublico;
         private System.Windows.Forms.ToolTip toolTip1;
+        private System.Windows.Forms.TextBox txbContato;
+        private System.Windows.Forms.Label label2;
     }
 }

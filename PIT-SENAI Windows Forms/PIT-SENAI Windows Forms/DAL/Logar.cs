@@ -21,7 +21,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
         //Create a SqlDataAdapter for the table Cadastro
         SqlDataAdapter da = new SqlDataAdapter(cmd);
         // Create the DataSet.
-        DataTable dt = new DataTable("Cadastro");
+        DataTable dt;
         AlterarPerfil ap = new AlterarPerfil();
 
         public bool verificarLogin(string email, string senha)
@@ -30,6 +30,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
             {
                 cmd = new SqlCommand();
                 da = new SqlDataAdapter(cmd);
+                dt = new DataTable();
 
                 //procurar email e senha no banco de dados
                 cmd.CommandText = @"
@@ -51,11 +52,10 @@ namespace PIT_SENAI_Windows_Forms.DAL
                     if (dt.Rows.Count > 0) //se foi encontrado login e senha
                     {
                         //conferir se firstLogin no banco
-                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["firstLogin"],0)) this.firstLogin = true;
-                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["ultimoPerfilMusico"], 0))ap.AlterarUltimoPerfil(true);
-                        else ap.AlterarUltimoPerfil(false);
-                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilMusico"], 0)) this.temPerfilMusico = true;
-                        if (BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilOrganizador"], 0)) this.temPerfilOrganizador = true;
+                        this.firstLogin = BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["firstLogin"],0);
+                        ap.AlterarUltimoPerfil(BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["ultimoPerfilMusico"], 0));
+                        this.temPerfilMusico = BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilMusico"], 0);
+                        this.temPerfilOrganizador = BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilOrganizador"], 0);
                         userid = int.Parse(dt.Rows[0]["id"].ToString());
                         usuario = dt.Rows[0]["usuario"].ToString();
                         PMusicoPublico = Convert.ToBoolean(dt.Rows[0]["publico"]);
@@ -72,6 +72,26 @@ namespace PIT_SENAI_Windows_Forms.DAL
             else this.mensagem = "Favor informar credenciais";
 
             return acesso;
+        }
+        public string AtualizarUsuario()
+        {
+            cmd = new SqlCommand();
+            cmd.CommandText = @"select usuario from cadastro where id = @id";
+            cmd.Parameters.AddWithValue("@id", userid);
+            try
+            {
+                cmd.Connection = conexao.Conectar();
+                usuario = cmd.ExecuteScalar().ToString();
+            }
+            catch(SqlException e)
+            {
+                Debug.WriteLine(e.Message);
+            }
+            finally
+            {
+                conexao.Desconectar();
+            }
+            return usuario;
         }
     }
 }

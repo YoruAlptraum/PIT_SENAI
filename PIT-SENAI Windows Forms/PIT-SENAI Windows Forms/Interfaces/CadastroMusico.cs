@@ -38,7 +38,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
                 }
             }
             else MessageBox.Show("No Rows");
-            //cmbInstrumento.Items.Add(c);
         }
 
         private void cmbEstiloMusical_Click(object sender, EventArgs e)
@@ -185,7 +184,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
                         }
                     }
                 }
-                controle.cadastrarMusico(instrumentoID, estiloID, txbRegiao.Text, txbDescriçao.Text,!chkPublico.Checked);
+                controle.cadastrarMusico(instrumentoID, estiloID, txbRegiao.Text, txbDescriçao.Text,txbContato.Text,!chkPublico.Checked);
                 MessageBox.Show(controle.mensagem);
                 if (controle.cadastrado)
                 {
