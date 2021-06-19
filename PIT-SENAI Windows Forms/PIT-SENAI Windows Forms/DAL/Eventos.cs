@@ -62,7 +62,7 @@ namespace PIT_SENAI_Windows_Forms.DAL
             //assim como o nome de usuario do organizador que publicou o evento
             //*adicionar a isso também o contato e a localização do evento
             cmd.CommandText = @"
-            select e.nome,e.descriçao,e.localizaçao,e.contato,c.usuario,e.id
+            select e.nome,e.descriçao,e.localizaçao,c.usuario,e.contato,e.id
             from eventos as e
             inner join porganizador as po
             on e.idorganizador = po.id

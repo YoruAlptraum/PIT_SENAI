@@ -45,14 +45,24 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
 
         private void btnCriarEvento_Click(object sender, EventArgs e)
         {
-            ctrl.CriarEvento(txbEvento.Text,txbDescriçao.Text,txbLocalizaçao.Text,txbContato.Text);
-            AtualizarlvwEventos();
+            if (txbEvento.Text.Trim().Equals("") || txbLocalizaçao.Text.Trim().Equals("") ||
+                txbContato.Text.Trim().Equals(""))
+            {
+                MessageBox.Show("Preencha os campos requisitados");
+            }
+            else
+            {
+                ctrl.CriarEvento(txbEvento.Text, txbDescriçao.Text, txbLocalizaçao.Text, txbContato.Text);
+                AtualizarlvwEventos();
+            }
         }
 
         private void btnDeletarEvento_Click(object sender, EventArgs e)
         {
             ctrl.RemoverEvento(GetEvento());
             AtualizarlvwEventos();
+            btnDeletarEvento.Enabled = btnAlterarEvento.Enabled = false;
+            txbEvento.Text = txbDescriçao.Text = txbLocalizaçao.Text = txbContato.Text = "";
         }
 
         private void btnAlterarEvento_Click(object sender, EventArgs e)
