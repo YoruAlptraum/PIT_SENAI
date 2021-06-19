@@ -21,12 +21,12 @@ namespace PIT_SENAI_Windows_Forms
             InitializeComponent();
         }
 
-        private void txt_cSenha_TextChanged(object sender, EventArgs e)
+        private void txbcSenha_TextChanged(object sender, EventArgs e)
         {
             PWChar();
         }
 
-        private void txt_cConfirmarSenha_TextChanged(object sender, EventArgs e)
+        private void txbcConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
             PWChar();
         }
@@ -40,13 +40,24 @@ namespace PIT_SENAI_Windows_Forms
         {
             if (chk_showPassword.Checked)
             {
-                txt_cSenha.PasswordChar = (char)0;
-                txt_cConfirmarSenha.PasswordChar = (char)0;
+                txbcSenha.PasswordChar = (char)0;
+                txbcConfirmarSenha.PasswordChar = (char)0;
             }
             else
             {
-                txt_cSenha.PasswordChar = '*';
-                txt_cConfirmarSenha.PasswordChar = '*';
+                txbcSenha.PasswordChar = '*';
+                txbcConfirmarSenha.PasswordChar = '*';
+            }
+            if (txbcConfirmarSenha.Text.Equals(txbcSenha.Text))
+            {
+                txbcConfirmarSenha.ForeColor = Color.Black;
+                lblConfirmSenha.Text = "";
+            }
+            else
+            {
+                txbcConfirmarSenha.ForeColor = Color.Red;
+                lblConfirmSenha.ForeColor = Color.Red;
+                lblConfirmSenha.Text = "A senha e a confirmação de senha precisam ser iguais";
             }
         }
 
@@ -55,11 +66,11 @@ namespace PIT_SENAI_Windows_Forms
         {
             Controle controle = new Controle();
 
-            if (chk_termos.Checked && txt_cSenha.Text.Equals(txt_cConfirmarSenha.Text) &&
+            if (chk_termos.Checked && txbcSenha.Text.Equals(txbcConfirmarSenha.Text) &&
                 !string.IsNullOrEmpty(txt_cNome.Text) && !string.IsNullOrEmpty(txt_cUser.Text) && 
-                !string.IsNullOrEmpty(txt_cSenha.Text) && !string.IsNullOrEmpty(txt_cEmail.Text) && !string.IsNullOrEmpty(txt_cCPF.Text) )
+                !string.IsNullOrEmpty(txbcSenha.Text) && !string.IsNullOrEmpty(txt_cEmail.Text) && !string.IsNullOrEmpty(txt_cCPF.Text) )
             {
-                controle.cadastrar(txt_cNome.Text,txt_cUser.Text,txt_cSenha.Text,txt_cEmail.Text,txt_cCPF.Text);
+                controle.cadastrar(txt_cNome.Text,txt_cUser.Text,txbcSenha.Text,txt_cEmail.Text,txt_cCPF.Text);
                 MessageBox.Show(controle.mensagem);
 
                 if (controle.mensagem.Equals("Cadastro realizado com sucesso!"))

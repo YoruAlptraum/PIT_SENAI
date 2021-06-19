@@ -20,6 +20,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             InitializeComponent();
             //buscar no banco de dados os eventos do organizador baseado em seu id
             AtualizarlvwEventos();
+            btnDeletarEvento.Enabled = btnAlterarEvento.Enabled = false;
         }
 
         public void AtualizarlvwEventos()
@@ -79,10 +80,13 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             if (lvwEventos.SelectedItems.Count > 0)
             {
                 i = lvwEventos.Items.IndexOf(lvwEventos.SelectedItems[0]);
+                btnAlterarEvento.Enabled = btnDeletarEvento.Enabled = true;
             }
-            if(i == -1)
+            else btnAlterarEvento.Enabled = btnDeletarEvento.Enabled = false;
+
+            if (i == -1)
             {
-                txbEvento.Text = txbDescriçao.Text = txbLocalizaçao.Text = txbContato.Text = "";
+                txbEvento.Text = txbDescriçao.Text = txbLocalizaçao.Text = txbContato.Text = "";                
             }
             else
             {

@@ -36,16 +36,17 @@ namespace PIT_SENAI_Windows_Forms
             this.label3 = new System.Windows.Forms.Label();
             this.txt_cUser = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.txt_cSenha = new System.Windows.Forms.TextBox();
+            this.txbcSenha = new System.Windows.Forms.TextBox();
             this.txt_cCPF = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.txt_cEmail = new System.Windows.Forms.TextBox();
             this.chk_termos = new System.Windows.Forms.CheckBox();
-            this.txt_cConfirmarSenha = new System.Windows.Forms.TextBox();
+            this.txbcConfirmarSenha = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.chk_showPassword = new System.Windows.Forms.CheckBox();
             this.llbVoltarAoLogin = new System.Windows.Forms.LinkLabel();
+            this.lblConfirmSenha = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btn_enviarCadastro
@@ -127,15 +128,15 @@ namespace PIT_SENAI_Windows_Forms
             this.label4.TabIndex = 6;
             this.label4.Text = "Senha:";
             // 
-            // txt_cSenha
+            // txbcSenha
             // 
-            this.txt_cSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cSenha.Location = new System.Drawing.Point(114, 162);
-            this.txt_cSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_cSenha.Name = "txt_cSenha";
-            this.txt_cSenha.Size = new System.Drawing.Size(555, 23);
-            this.txt_cSenha.TabIndex = 3;
-            this.txt_cSenha.TextChanged += new System.EventHandler(this.txt_cSenha_TextChanged);
+            this.txbcSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbcSenha.Location = new System.Drawing.Point(114, 162);
+            this.txbcSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txbcSenha.Name = "txbcSenha";
+            this.txbcSenha.Size = new System.Drawing.Size(555, 23);
+            this.txbcSenha.TabIndex = 3;
+            this.txbcSenha.TextChanged += new System.EventHandler(this.txbcSenha_TextChanged);
             // 
             // txt_cCPF
             // 
@@ -192,22 +193,22 @@ namespace PIT_SENAI_Windows_Forms
             this.chk_termos.Text = "Li e aceito o Termo de Condições de Uso e Política de Privacidade";
             this.chk_termos.UseVisualStyleBackColor = true;
             // 
-            // txt_cConfirmarSenha
+            // txbcConfirmarSenha
             // 
-            this.txt_cConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txt_cConfirmarSenha.Location = new System.Drawing.Point(114, 211);
-            this.txt_cConfirmarSenha.Margin = new System.Windows.Forms.Padding(4);
-            this.txt_cConfirmarSenha.Name = "txt_cConfirmarSenha";
-            this.txt_cConfirmarSenha.Size = new System.Drawing.Size(555, 23);
-            this.txt_cConfirmarSenha.TabIndex = 4;
-            this.txt_cConfirmarSenha.TextChanged += new System.EventHandler(this.txt_cConfirmarSenha_TextChanged);
+            this.txbcConfirmarSenha.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbcConfirmarSenha.Location = new System.Drawing.Point(114, 211);
+            this.txbcConfirmarSenha.Margin = new System.Windows.Forms.Padding(4);
+            this.txbcConfirmarSenha.Name = "txbcConfirmarSenha";
+            this.txbcConfirmarSenha.Size = new System.Drawing.Size(555, 23);
+            this.txbcConfirmarSenha.TabIndex = 4;
+            this.txbcConfirmarSenha.TextChanged += new System.EventHandler(this.txbcConfirmarSenha_TextChanged);
             // 
             // label5
             // 
             this.label5.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(10, 194);
+            this.label5.Location = new System.Drawing.Point(11, 200);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(68, 34);
@@ -240,21 +241,31 @@ namespace PIT_SENAI_Windows_Forms
             this.llbVoltarAoLogin.Text = "Voltar a tela de login";
             this.llbVoltarAoLogin.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llbDeVoltaAoLogin_LinkClicked);
             // 
+            // lblConfirmSenha
+            // 
+            this.lblConfirmSenha.AutoSize = true;
+            this.lblConfirmSenha.ForeColor = System.Drawing.Color.Red;
+            this.lblConfirmSenha.Location = new System.Drawing.Point(111, 238);
+            this.lblConfirmSenha.Name = "lblConfirmSenha";
+            this.lblConfirmSenha.Size = new System.Drawing.Size(0, 16);
+            this.lblConfirmSenha.TabIndex = 20;
+            // 
             // Cadastro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(687, 513);
+            this.Controls.Add(this.lblConfirmSenha);
             this.Controls.Add(this.llbVoltarAoLogin);
             this.Controls.Add(this.chk_showPassword);
-            this.Controls.Add(this.txt_cConfirmarSenha);
+            this.Controls.Add(this.txbcConfirmarSenha);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.chk_termos);
             this.Controls.Add(this.txt_cEmail);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.txt_cCPF);
-            this.Controls.Add(this.txt_cSenha);
+            this.Controls.Add(this.txbcSenha);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.txt_cUser);
             this.Controls.Add(this.label3);
@@ -282,15 +293,16 @@ namespace PIT_SENAI_Windows_Forms
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txt_cUser;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txt_cSenha;
+        private System.Windows.Forms.TextBox txbcSenha;
         private System.Windows.Forms.TextBox txt_cCPF;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox txt_cEmail;
         private System.Windows.Forms.CheckBox chk_termos;
-        private System.Windows.Forms.TextBox txt_cConfirmarSenha;
+        private System.Windows.Forms.TextBox txbcConfirmarSenha;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chk_showPassword;
         private System.Windows.Forms.LinkLabel llbVoltarAoLogin;
+        private System.Windows.Forms.Label lblConfirmSenha;
     }
 }

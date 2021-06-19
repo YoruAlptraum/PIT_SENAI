@@ -130,7 +130,6 @@ namespace PIT_SENAI_Windows_Forms.DAL
             {
                 this.mensagem = e.ToString();
                 Debug.WriteLine(e.ToString());
-                return;
             }
             finally
             {

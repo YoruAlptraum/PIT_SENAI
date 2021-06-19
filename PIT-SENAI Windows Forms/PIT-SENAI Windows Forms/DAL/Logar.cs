@@ -14,12 +14,12 @@ namespace PIT_SENAI_Windows_Forms.DAL
         public string mensagem = "";
         static public string usuario;
         static public int userid;
-        public bool acesso,firstLogin,temPerfilMusico,temPerfilOrganizador,PMusicoPublico;
+        public bool acesso = false,firstLogin,temPerfilMusico,temPerfilOrganizador;
 
         Conexao conexao = new Conexao();
-        static SqlCommand cmd = new SqlCommand();
+        static SqlCommand cmd;
         //Create a SqlDataAdapter for the table Cadastro
-        SqlDataAdapter da = new SqlDataAdapter(cmd);
+        SqlDataAdapter da;
         // Create the DataSet.
         DataTable dt;
         AlterarPerfil ap = new AlterarPerfil();
@@ -34,10 +34,9 @@ namespace PIT_SENAI_Windows_Forms.DAL
 
                 //procurar email e senha no banco de dados
                 cmd.CommandText = @"
-                select c.id,c.usuario,c.firstLogin, c.ultimoPerfilMusico, c.temPerfilMusico, c.temPerfilOrganizador , pm.publico
-                from cadastro as c
-                inner join pmusico as pm on c.id = pm.id
-                where email = @email and senha = @senha ";
+                select id,usuario,firstLogin, ultimoPerfilMusico, temPerfilMusico,temPerfilOrganizador
+                from cadastro
+                where email = @email and senha = @senha";
                 cmd.Parameters.AddWithValue("@senha", senha);
                 cmd.Parameters.AddWithValue("@email", email);
 
@@ -58,7 +57,6 @@ namespace PIT_SENAI_Windows_Forms.DAL
                         this.temPerfilOrganizador = BitConverter.ToBoolean((System.Byte[])dt.Rows[0]["temPerfilOrganizador"], 0);
                         userid = int.Parse(dt.Rows[0]["id"].ToString());
                         usuario = dt.Rows[0]["usuario"].ToString();
-                        PMusicoPublico = Convert.ToBoolean(dt.Rows[0]["publico"]);
                         //retorna o acesso como true
                         acesso = true;
                     }

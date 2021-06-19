@@ -11,7 +11,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
     public class Controle
     {
         public bool acesso, cadastrado;
-        public static bool firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador,PMusicoPublico;
+        public static bool firstLogin, ultimoPerfilMusico, temPerfilMusico, temPerfilOrganizador;
         public string mensagem = "";
         public static string usuario;
         public static int id;
@@ -39,7 +39,6 @@ namespace PIT_SENAI_Windows_Forms.Modelo
             ultimoPerfilMusico = AlterarPerfil.ultimoPerfilMusico;
             temPerfilMusico = logar.temPerfilMusico;
             temPerfilOrganizador = logar.temPerfilOrganizador;
-            PMusicoPublico = logar.PMusicoPublico;
             id = Logar.userid;
             usuario = Logar.usuario;
             return acesso;
@@ -75,7 +74,7 @@ namespace PIT_SENAI_Windows_Forms.Modelo
 
             firstLogin = cm.firstLogin;
             ultimoPerfilMusico = AlterarPerfil.ultimoPerfilMusico;
-            temPerfilOrganizador = cm.temPerfilMusico;
+            temPerfilMusico = cm.temPerfilMusico;
 
             return mensagem;
         }
