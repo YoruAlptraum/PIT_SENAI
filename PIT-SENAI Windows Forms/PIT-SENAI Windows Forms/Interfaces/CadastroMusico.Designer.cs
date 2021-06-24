@@ -30,6 +30,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CadastroMusico));
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.txbDescriçao = new System.Windows.Forms.TextBox();
@@ -260,6 +261,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CadastroMusico";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

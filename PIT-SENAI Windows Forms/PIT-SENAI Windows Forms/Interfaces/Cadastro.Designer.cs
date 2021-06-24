@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Cadastro));
             this.btn_enviarCadastro = new System.Windows.Forms.Button();
             this.txt_cNome = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -275,6 +276,7 @@ namespace PIT_SENAI_Windows_Forms
             this.Controls.Add(this.btn_enviarCadastro);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Cadastro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             this.txt_login = new System.Windows.Forms.TextBox();
             this.txt_password = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -132,6 +133,7 @@ namespace PIT_SENAI_Windows_Forms
             this.Controls.Add(this.txt_login);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Login";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

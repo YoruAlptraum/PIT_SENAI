@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{CFE6881F-60F6-45E7-A2E4-5170EC91D47E}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>PIT_SENAI_Windows_Forms</RootNamespace>
-    <AssemblyName>PIT-SENAI Windows Forms</AssemblyName>
+    <RootNamespace>Toca_Aqui</RootNamespace>
+    <AssemblyName>Toca Aqui</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -31,6 +31,9 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>musical-instrument-1424305-1204297.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -153,6 +156,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <EmbeddedResource Include="Interfaces\Perfis.dje.resx">
       <DependentUpon>Perfis.cs</DependentUpon>
@@ -172,6 +176,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="musical-instrument-1424305-1204297.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

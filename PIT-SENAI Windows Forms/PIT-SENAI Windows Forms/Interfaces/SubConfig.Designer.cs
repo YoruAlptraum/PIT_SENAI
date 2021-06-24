@@ -30,6 +30,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubConfig));
             this.label1 = new System.Windows.Forms.Label();
             this.txbNome = new System.Windows.Forms.TextBox();
             this.txbUsuario = new System.Windows.Forms.TextBox();
@@ -50,6 +51,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.label10 = new System.Windows.Forms.Label();
             this.chkPublico = new System.Windows.Forms.CheckBox();
             this.grpConfigGeral = new System.Windows.Forms.GroupBox();
+            this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.grpConfigOrganizador = new System.Windows.Forms.GroupBox();
             this.txbODescriçao = new System.Windows.Forms.TextBox();
             this.grpConfigMusico = new System.Windows.Forms.GroupBox();
@@ -65,7 +67,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnSalvar = new System.Windows.Forms.Button();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
-            this.lblConfirmeSenha = new System.Windows.Forms.Label();
             this.grpConfigGeral.SuspendLayout();
             this.grpConfigOrganizador.SuspendLayout();
             this.grpConfigMusico.SuspendLayout();
@@ -270,6 +271,15 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.grpConfigGeral.TabStop = false;
             this.grpConfigGeral.Text = "Configurações Gerais:";
             // 
+            // lblConfirmeSenha
+            // 
+            this.lblConfirmeSenha.AutoSize = true;
+            this.lblConfirmeSenha.Location = new System.Drawing.Point(393, 109);
+            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
+            this.lblConfirmeSenha.Size = new System.Drawing.Size(342, 16);
+            this.lblConfirmeSenha.TabIndex = 10;
+            this.lblConfirmeSenha.Text = "Senha e confirmação de senha precisam ser iguais";
+            // 
             // grpConfigOrganizador
             // 
             this.grpConfigOrganizador.Controls.Add(this.txbODescriçao);
@@ -430,15 +440,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.splitContainer1.SplitterDistance = 90;
             this.splitContainer1.TabIndex = 26;
             // 
-            // lblConfirmeSenha
-            // 
-            this.lblConfirmeSenha.AutoSize = true;
-            this.lblConfirmeSenha.Location = new System.Drawing.Point(393, 109);
-            this.lblConfirmeSenha.Name = "lblConfirmeSenha";
-            this.lblConfirmeSenha.Size = new System.Drawing.Size(342, 16);
-            this.lblConfirmeSenha.TabIndex = 10;
-            this.lblConfirmeSenha.Text = "Senha e confirmação de senha precisam ser iguais";
-            // 
             // SubConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -448,6 +449,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubConfig";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

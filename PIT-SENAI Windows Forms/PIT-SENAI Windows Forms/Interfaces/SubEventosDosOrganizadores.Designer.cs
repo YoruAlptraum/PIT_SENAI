@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubEventosDosOrganizadores));
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.chEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDescriçao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -46,8 +47,8 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.txbContato = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.txbDescriçao = new System.Windows.Forms.TextBox();
             this.btnAlterarEvento = new System.Windows.Forms.Button();
+            this.txbDescriçao = new System.Windows.Forms.TextBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -222,14 +223,6 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.panel1.Size = new System.Drawing.Size(784, 115);
             this.panel1.TabIndex = 1;
             // 
-            // txbDescriçao
-            // 
-            this.txbDescriçao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.txbDescriçao.Location = new System.Drawing.Point(99, 39);
-            this.txbDescriçao.Name = "txbDescriçao";
-            this.txbDescriçao.Size = new System.Drawing.Size(333, 23);
-            this.txbDescriçao.TabIndex = 3;
-            // 
             // btnAlterarEvento
             // 
             this.btnAlterarEvento.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -242,6 +235,14 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.btnAlterarEvento.UseVisualStyleBackColor = true;
             this.btnAlterarEvento.Click += new System.EventHandler(this.btnAlterarEvento_Click);
             // 
+            // txbDescriçao
+            // 
+            this.txbDescriçao.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txbDescriçao.Location = new System.Drawing.Point(99, 39);
+            this.txbDescriçao.Name = "txbDescriçao";
+            this.txbDescriçao.Size = new System.Drawing.Size(333, 23);
+            this.txbDescriçao.TabIndex = 3;
+            // 
             // SubEventosDosOrganizadores
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,6 +253,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubEventosDosOrganizadores";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SubListaEventos));
             this.lvwEventos = new System.Windows.Forms.ListView();
             this.chEvento = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.chDescriçao = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -122,6 +123,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.panel2);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SubListaEventos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;

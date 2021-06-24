@@ -29,6 +29,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Principal));
             this.btnProfileImage = new System.Windows.Forms.Button();
             this.lblPerfilType = new System.Windows.Forms.Label();
             this.btnMeusEventos = new System.Windows.Forms.Button();
@@ -219,6 +220,7 @@ namespace PIT_SENAI_Windows_Forms.Interfaces
             this.Controls.Add(this.pnlPrincipal);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("MS Reference Sans Serif", 9.75F);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Principal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
